@@ -1,48 +1,81 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chaveton Studios</title>
-<meta name="description" content="Chaveton Studios — estudio independiente de videojuegos. Creadores de DominionHex.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<link rel="icon" href="favicon.ico">
+
 <div class="wrap">
 
   <header class="site">
-    <div class="mark" aria-hidden="true"></div>
-    <div class="studio-name">Chaveton Studios</div>
-    <nav class="top" style="margin-left:auto">
-      <a href="privacy.html">Privacidad</a>
+    <img class="mark" src="logo.png" alt="Chaveton Studios">
+    <div class="studio-name">CHAVETON&nbsp;STUDIOS</div>
+    <nav class="top">
+      <a href="#estudio">Estudio</a>
+      <a href="juegos.html">Juegos</a>
       <a href="mailto:contacto@example.com">Contacto</a>
     </nav>
   </header>
 
   <section class="hero">
-    <p class="tagline">Estudio independiente de videojuegos</p>
-    <h1>Hacemos juegos de estrategia con alma de tablero.</h1>
-    <p>Chaveton Studios es un estudio independiente enfocado en juegos de estrategia por turnos. Nuestro primer título, <strong>DominionHex</strong>, está actualmente en fase Beta.</p>
+    <img class="emblem" src="logo.png" alt="Emblema Chaveton Studios">
+    <span class="eyebrow">Estudio independiente de videojuegos</span>
+    <h1>Diseñamos estrategia<br>con <em>alma de tablero.</em></h1>
+    <p class="lede">Chaveton Studios crea juegos de estrategia por turnos donde las reglas son claras, el tablero es hexagonal y cada partida se siente como una buena tarde de mesa.</p>
+    <div class="ctas">
+      <a class="btn primary" href="mailto:contacto@example.com">Únete a la Beta</a>
+      <a class="btn ghost" href="dominionhex.html">Ver DominionHex</a>
+    </div>
   </section>
 
-  <div class="card">
-    <span class="badge">En desarrollo</span>
-    <h2>DominionHex</h2>
-    <p>Un juego de estrategia por turnos sobre un tablero hexagonal, con modos para un jugador contra la IA y partidas locales entre dos jugadores. Incluye un modo Contra Reloj para quienes ya dominan el tablero.</p>
-    <a class="button" href="mailto:contacto@example.com">Escribinos para probar la Beta</a>
+  <div class="panel" id="estudio">
+    <span class="mote" aria-hidden="true"></span>
+    <div class="section-head">
+      <h2>Sobre el estudio</h2>
+    </div>
+    <p>Chaveton Studios nace como un proyecto independiente de desarrollo de videojuegos. No perseguimos la próxima mecánica viral: perseguimos partidas bien jugadas, con reglas que se explican en una mesa y decisiones que importan en cada turno.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <span class="num">I</span>
+        <h3>Reglas claras</h3>
+        <p>Sistemas que se explican en un minuto y se dominan en una tarde.</p>
+      </div>
+      <div class="pillar">
+        <span class="num">II</span>
+        <h3>Tablero hexagonal</h3>
+        <p>Cada decisión de diseño parte de cómo se mueve una pieza en la retícula.</p>
+      </div>
+      <div class="pillar">
+        <span class="num">III</span>
+        <h3>Alma de mesa</h3>
+        <p>Partidas pensadas para sentarse con alguien, no para vaciar una batería.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>Sobre el estudio</h2>
-    <p>Chaveton Studios nace como un proyecto independiente de desarrollo de videojuegos, con foco en diseño de reglas claras, tableros hexagonales y partidas que se sienten como un buen juego de mesa.</p>
+  <div class="panel game" id="juegos">
+    <span class="mote" aria-hidden="true"></span>
+    <div class="section-head">
+      <h2>Nuestro primer título</h2>
+      <span class="badge">En Beta</span>
+    </div>
+    <div class="game-teaser">
+      <img class="game-teaser-crest" src="img/crest_hex.png" alt="Emblema de DominionHex">
+      <div>
+        <h3>DominionHex</h3>
+        <p>Estrategia por turnos sobre un tablero hexagonal. Contra la IA, en partidas locales a dos jugadores, o a contrarreloj para quienes ya dominan el tablero.</p>
+        <a class="btn ghost" href="dominionhex.html">Ver DominionHex →</a>
+      </div>
+    </div>
   </div>
 
   <footer>
-    <span>© <span id="year"></span> Chaveton Studios</span>
-    <a href="privacy.html">Política de privacidad</a>
+    <span>© 2026 Chaveton Studios</span>
+    <span class="links">
+      <a href="privacy.html">Política de privacidad</a>
+      <a href="mailto:contacto@example.com">Contacto</a>
+    </span>
   </footer>
 
 </div>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
