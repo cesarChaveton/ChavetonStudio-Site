@@ -416,8 +416,13 @@ nav.top a.current{color:var(--gold-light);}
 /* ---------- dominionhex.html: game hero ---------- */
 
 .game-hero{
+  position:relative;
   text-align:center;
-  padding:8px 0 56px;
+  padding:72px 20px 56px;
+  margin:0 0 8px;
+  background:
+    linear-gradient(180deg, rgba(14,13,12,0.30) 0%, rgba(14,13,12,0.74) 60%, var(--bg) 100%),
+    url('img/theme_bg_fortified_camp_muddy_v1.jpg') center 38%/cover no-repeat;
 }
 
 .game-hero img.crest-lg{
@@ -569,6 +574,34 @@ nav.top a.current{color:var(--gold-light);}
   font-size:0.82rem;
   color:var(--text-faint);
   margin-top:18px;
+}
+
+/* ---------- escenarios próximamente ---------- */
+
+.scenario-soon{
+  position:relative;
+  margin-top:22px;
+  overflow:hidden;
+  border:1px solid var(--border);
+}
+
+.scenario-soon img{
+  width:100%;
+  height:auto;
+  display:block;
+  opacity:0.8;
+  filter:grayscale(0.1);
+}
+
+.scenario-soon .name{
+  position:absolute;
+  left:16px;
+  bottom:14px;
+  font-family:var(--font-display);
+  font-size:1rem;
+  letter-spacing:0.02em;
+  color:var(--gold-light);
+  text-shadow:0 2px 10px rgba(0,0,0,0.85);
 }
 
 /* ---------- footer ---------- */
