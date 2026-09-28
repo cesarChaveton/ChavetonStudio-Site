@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>DominionHex — Chaveton Studios</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +44,7 @@
       <div class="mode-card">
         <div class="glyph" aria-hidden="true">1J</div>
         <h3>Contra la IA</h3>
-        <p>Partida individual contra el Golem, el rival de inteligencia artificial del estudio.</p>
+        <p>Partida individual contra un rival con nombre, retrato y ficha.</p>
       </div>
       <div class="mode-card">
         <div class="glyph" aria-hidden="true">2J</div>
@@ -61,31 +62,25 @@
   <div class="panel">
     <span class="mote" aria-hidden="true"></span>
     <div class="section-head">
-      <h2>Elenco actual</h2>
-      <span class="badge muted">4 disponibles</span>
+      <h2>Tus fichas</h2>
     </div>
-    <p>Cada escenario tiene su propio personaje jugable, y el Golem responde cuando el rival es la IA.</p>
+    <p>Cambian según el escenario.</p>
 
-    <div class="cast-grid">
+    <div class="cast-grid scenario">
       <div class="cast-card">
-        <img src="img/piece_explorador_v2.png" alt="Explorador">
+        <img src="img/piece_explorador.png" alt="Explorador">
         <h4>Explorador</h4>
         <span class="tag">Escenario Base</span>
       </div>
       <div class="cast-card">
-        <img src="img/piece_miliciano_v2.png" alt="Miliciano">
+        <img src="img/piece_miliciano.png" alt="Miliciano">
         <h4>Miliciano</h4>
         <span class="tag">Escenario Expansion</span>
       </div>
       <div class="cast-card">
-        <img src="img/piece_portaestandarte_v2.png" alt="Portaestandarte">
+        <img src="img/piece_portaestandarte.png" alt="Portaestandarte">
         <h4>Portaestandarte</h4>
         <span class="tag">Escenario Contact</span>
-      </div>
-      <div class="cast-card">
-        <img src="img/piece_golem_ia_v2.png" alt="Golem IA">
-        <h4>Golem</h4>
-        <span class="tag ia">Rival IA</span>
       </div>
     </div>
   </div>
@@ -93,38 +88,195 @@
   <div class="panel">
     <span class="mote" aria-hidden="true"></span>
     <div class="section-head">
-      <h2>Próximamente: facciones</h2>
-      <span class="badge muted">Vista previa</span>
+      <h2>Rivales</h2>
     </div>
-    <p>Ya tenemos ilustrado un elenco mucho más grande, reservado para una futura tienda de facciones. Todavía no está a la venta ni es parte de la Beta — esto es solo un adelanto del arte.</p>
+    <p>Diez rivales, con retrato, nombre y ficha de tablero.</p>
 
-    <div class="soon-grid">
-      <div class="soon-card">
-        <img src="img/piece_samurai.png" alt="Samurái (próximamente)">
-        <div class="name">Samurái</div>
-      </div>
-      <div class="soon-card">
-        <img src="img/piece_vikingo.png" alt="Vikingo (próximamente)">
-        <div class="name">Vikingo</div>
-      </div>
-      <div class="soon-card">
-        <img src="img/piece_azteca.png" alt="Azteca (próximamente)">
-        <div class="name">Azteca</div>
-      </div>
-      <div class="soon-card">
-        <img src="img/piece_caballero_medieval.png" alt="Caballero medieval (próximamente)">
-        <div class="name">Caballero</div>
-      </div>
-      <div class="soon-card">
-        <img src="img/piece_robot.png" alt="Robot (próximamente)">
-        <div class="name">Robot</div>
-      </div>
-      <div class="soon-card">
-        <img src="img/piece_alien.png" alt="Alien (próximamente)">
-        <div class="name">Alien</div>
-      </div>
+    <h3 class="diff">Fácil</h3>
+    <div class="roster">
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_pipo_v1.png" alt="Retrato de Pipo, el Duende Travieso">
+          <img src="img/piece_rival_pipo.png" alt="Ficha de Pipo">
+        </div>
+        <h4>Pipo, el Duende Travieso</h4>
+        <span class="tag">Gratis</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/hud_portrait_generic_ai_v1.png" alt="Retrato de IA">
+          <img src="img/piece_golem_ia.png" alt="Ficha de IA, el gólem">
+        </div>
+        <h4>IA</h4>
+        <span class="tag">Gratis</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_marea_v1.png" alt="Retrato de Capitana Marea">
+          <img src="img/piece_rival_marea.png" alt="Ficha de Capitana Marea">
+        </div>
+        <h4>Capitana Marea</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_xorath_v1.png" alt="Retrato de Xo'Rath, el Visitante">
+          <img src="img/piece_rival_xorath.png" alt="Ficha de Xo'Rath">
+        </div>
+        <h4>Xo'Rath, el Visitante</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
     </div>
-    <p class="soon-note">+ 21 facciones más ya ilustradas, a la espera de la tienda.</p>
+
+    <h3 class="diff">Medio</h3>
+    <div class="roster">
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_harald_v1.png" alt="Retrato de Harald el Saqueador">
+          <img src="img/piece_rival_harald.png" alt="Ficha de Harald">
+        </div>
+        <h4>Harald el Saqueador</h4>
+        <span class="tag">Gratis</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_adelantado_v2.png" alt="Retrato de El Codicioso">
+          <img src="img/piece_rival_adelantado.png" alt="Ficha de El Codicioso">
+        </div>
+        <h4>El Codicioso</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_sangrenoche_v1.png" alt="Retrato de Condesa Ambiciosa">
+          <img src="img/piece_rival_sangrenoche.png" alt="Ficha de Condesa Ambiciosa">
+        </div>
+        <h4>Condesa Ambiciosa</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+    </div>
+
+    <h3 class="diff">Difícil</h3>
+    <div class="roster">
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_nahuel_v2.png" alt="Retrato de Toqui Nahuel">
+          <img src="img/piece_rival_nahuel.png" alt="Ficha de Toqui Nahuel">
+        </div>
+        <h4>Toqui Nahuel</h4>
+        <span class="tag">Gratis</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_kaede_v1.png" alt="Retrato de Kaede, la Sombra">
+          <img src="img/piece_rival_kaede.png" alt="Ficha de Kaede">
+        </div>
+        <h4>Kaede, la Sombra</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_rival_centinela7_v1.png" alt="Retrato de Centinela-7">
+          <img src="img/piece_rival_centinela7.png" alt="Ficha de Centinela-7">
+        </div>
+        <h4>Centinela-7</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+    </div>
+  </div>
+
+  <div class="panel">
+    <span class="mote" aria-hidden="true"></span>
+    <div class="section-head">
+      <h2>Tu identidad</h2>
+    </div>
+    <p>La cara y la ficha se eligen por separado.</p>
+
+    <div class="roster">
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/hud_portrait_generic_human_v1.png" alt="Cara de El Caballero">
+          <figure>
+            <img src="img/piece_explorador.png" alt="Ficha por escenario, Explorador">
+            <figcaption>Por escenario</figcaption>
+          </figure>
+        </div>
+        <h4>El Caballero</h4>
+        <span class="tag">Gratis</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_livia_v1.png" alt="Cara de Livia, la Legionaria">
+          <img src="img/piece_player_livia.png" alt="Ficha de Livia">
+        </div>
+        <h4>Livia, la Legionaria</h4>
+        <span class="tag">Gratis</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_asha_v1.png" alt="Cara de Asha de la Ruta">
+          <img src="img/piece_player_asha.png" alt="Ficha de Asha">
+        </div>
+        <h4>Asha de la Ruta</h4>
+        <span class="tag">Gratis</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_kin_v1.png" alt="Cara de Ix K'in">
+          <img src="img/piece_player_kin.png" alt="Ficha de Ix K'in">
+        </div>
+        <h4>Ix K'in</h4>
+        <span class="tag">Gratis</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_bran_v1.png" alt="Cara de Bran Cuervotuerce">
+          <img src="img/piece_player_bran.png" alt="Ficha de Bran">
+        </div>
+        <h4>Bran Cuervotuerce</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_sargal_v1.png" alt="Cara de Sargal el Estepario">
+          <img src="img/piece_player_sargal.png" alt="Ficha de Sargal">
+        </div>
+        <h4>Sargal el Estepario</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_nefer_v1.png" alt="Cara de Nefer, Ojo de Loto">
+          <img src="img/piece_player_nefer.png" alt="Ficha de Nefer">
+        </div>
+        <h4>Nefer, Ojo de Loto</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_hana_v1.png" alt="Cara de Hana, Hoja Quieta">
+          <img src="img/piece_player_hana.png" alt="Ficha de Hana">
+        </div>
+        <h4>Hana, Hoja Quieta</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_gorv_v1.png" alt="Cara de Gorv Colmillo">
+          <img src="img/piece_player_gorv.png" alt="Ficha de Gorv">
+        </div>
+        <h4>Gorv Colmillo</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+      <article class="roster-card">
+        <div class="roster-art">
+          <img src="img/ui_avatar_nidra_v1.png" alt="Cara de Nidra, la Colmena">
+          <img src="img/piece_player_nidra.png" alt="Ficha de Nidra">
+        </div>
+        <h4>Nidra, la Colmena</h4>
+        <span class="tag sale">Próximamente a la venta</span>
+      </article>
+    </div>
   </div>
 
   <div class="panel">

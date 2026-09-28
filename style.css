@@ -502,8 +502,11 @@ nav.top a.current{color:var(--gold-light);}
   margin-top:24px;
 }
 
+.cast-grid.scenario{grid-template-columns:repeat(3, 1fr);}
+
 @media (max-width:680px){
   .cast-grid{grid-template-columns:repeat(2, 1fr);}
+  .cast-grid.scenario{grid-template-columns:1fr;}
 }
 
 .cast-card{
@@ -535,45 +538,79 @@ nav.top a.current{color:var(--gold-light);}
 
 .cast-card .tag.ia{color:var(--blue-light);}
 
-/* ---------- soon (future faction shop) ---------- */
+/* ---------- roster (rivals and identity) ---------- */
 
-.soon-grid{
+.diff{
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:0.95rem;
+  letter-spacing:0.06em;
+  color:var(--gold-light);
+  margin:26px 0 0;
+}
+
+.roster{
   display:grid;
-  grid-template-columns:repeat(6, 1fr);
-  gap:12px;
-  margin-top:22px;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:12px;
+}
+
+.roster-card{
+  background:var(--bg-sunken);
+  border:1px solid var(--border);
+  padding:14px 12px 16px;
+  text-align:center;
+}
+
+.roster-art{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.roster-art img{
+  width:46%;
+  max-width:148px;
+  height:auto;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+}
+
+.roster-art figure{
+  margin:0;
+  width:46%;
+  max-width:148px;
+}
+
+.roster-art figure img{
+  width:100%;
+  max-width:none;
+}
+
+.roster-art figcaption{
+  font-size:0.68rem;
+  color:var(--text-faint);
+  margin-top:4px;
+  letter-spacing:0.02em;
+}
+
+.roster-card h4{
+  font-size:0.92rem;
+  margin:0 0 4px;
+  color:var(--text);
+}
+
+.roster-card .tag.sale{
+  display:block;
+  line-height:1.35;
 }
 
 @media (max-width:680px){
-  .soon-grid{grid-template-columns:repeat(3, 1fr);}
-}
-
-.soon-card{
-  position:relative;
-  background:var(--bg-sunken);
-  border:1px solid var(--border);
-  padding:10px 8px 12px;
-  text-align:center;
-  overflow:hidden;
-}
-
-.soon-card img{
-  width:100%;
-  height:auto;
-  opacity:0.55;
-  filter:grayscale(0.3) drop-shadow(0 3px 10px rgba(0,0,0,0.5));
-}
-
-.soon-card .name{
-  font-size:0.72rem;
-  color:var(--text-faint);
-  margin-top:6px;
-}
-
-.soon-note{
-  font-size:0.82rem;
-  color:var(--text-faint);
-  margin-top:18px;
+  .roster{grid-template-columns:1fr;}
+  .roster-art img,
+  .roster-art figure{max-width:132px;}
 }
 
 /* ---------- escenarios próximamente ---------- */
