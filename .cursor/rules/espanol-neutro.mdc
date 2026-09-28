@@ -1,0 +1,14 @@
+---
+description: Texto para el usuario en español neutro con tuteo
+alwaysApply: true
+---
+
+# Español neutro
+
+Todo texto que lee el usuario (páginas, fichas, meta, alt, títulos, botones, alertas) va en español neutro con tuteo. Los nombres propios se quedan.
+
+- Voseo → tuteo: `tenés` → `tienes`, `podés` → `puedes`, `querés` → `quieres`, `elegís` → `eliges`, `vos` → `tú`.
+- Imperativo voseante → forma tú: `descubrí` → `descubre`, `probá` → `prueba`, `elegí` → `elige`, `jugá` → `juega`, `movés` → `mueves`.
+- Modismos rioplatenses → neutro: `acá` → `aquí`, `fijate` → `fíjate`, `che` / `copado` / `laburo` no se usan.
+
+El sentido de la frase no cambia.
