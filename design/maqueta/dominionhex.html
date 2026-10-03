@@ -1,0 +1,294 @@
+<title>DominionHex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: ficha-sobre-tablero. Hero con teléfono horizontal, explicación en 3 bloques, elenco en hexágonos. */
+:root{
+  --ink:#12151b; --ink2:#1a1f28; --line:#2b3240; --bone:#ece5d3; --mute:#9aa3b2;
+  --brass:#c9a24b; --amber:#f2a93b; --blue:#5b97e0;
+  --display:'Cinzel','Trajan Pro',Georgia,serif; --body:'EB Garamond',Georgia,serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--bone);font:400 19px/1.55 var(--body);padding-inline:20px}
+a{color:inherit}
+.w{max-width:1080px;margin-inline:auto}
+section{padding-block:72px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;letter-spacing:.03em;margin:0;text-wrap:balance}
+h2{font-size:clamp(26px,4.2vw,38px)}
+h3{font-family:var(--body);font-size:24px;font-weight:600;letter-spacing:0;line-height:1.2}
+.eyebrow{font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);font-weight:600}
+p{margin:0}
+.lede{color:var(--mute);max-width:58ch;font-size:21px}
+nav{display:flex;justify-content:space-between;align-items:center;padding-block:18px;gap:12px}
+nav b{font-family:var(--display);font-size:20px;letter-spacing:.12em;text-transform:uppercase}
+nav a{font-size:19px;text-decoration:none;color:var(--bone)}
+nav .links{display:flex;gap:24px;align-items:center}
+.btn{display:inline-block;background:var(--amber);color:#1b1305;font-weight:600;font-size:22px;text-decoration:none;padding:16px 40px;clip-path:polygon(18px 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,18px 100%,0 50%)}
+.btn:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn.ghost{background:var(--line);color:var(--bone)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding-block:40px 64px}
+.hero h1{font-size:clamp(38px,7.2vw,72px);letter-spacing:.04em}
+.hero h1 span{color:var(--amber)}
+.hero .tag{font-size:clamp(23px,3vw,30px);margin-top:14px;font-weight:500;font-style:italic;line-height:1.3}
+.hero .lede{margin-top:16px}
+.where{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.where li{list-style:none;border:1px solid var(--line);background:var(--ink2);padding:8px 14px;border-radius:999px;font-size:16px;font-weight:500}
+.where li i{font-style:normal;color:var(--amber);margin-right:6px}
+.where{padding:0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.cta small{color:var(--mute);font-size:16px;flex-basis:100%}
+.stage{position:relative;min-width:0}
+.phone{background:#05070a;border-radius:26px;padding:10px;border:2px solid #343c4c;box-shadow:0 30px 60px #0009}
+.phone img{display:block;width:100%;border-radius:16px;aspect-ratio:2/1;object-fit:cover}
+.stage{display:grid;gap:16px}
+.phone.sm{width:70%;justify-self:end}
+.stage .cap{font-size:16px;color:var(--mute);text-align:center}
+.adfree{display:flex;gap:24px;align-items:center;border:1px solid var(--brass);padding:28px;background:var(--ink2)}
+.seal{flex:none;display:grid;place-items:center;width:84px;height:96px;background:var(--amber);color:#1b1305;font:700 38px var(--display);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.modes div{border-top:2px solid var(--amber);padding-top:12px}
+.modes p{color:var(--mute);font-size:18px}
+.scn{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.scn img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+@media(max-width:860px){.modes,.scn{grid-template-columns:1fr}.adfree{flex-direction:column;align-items:flex-start}}
+/* explain */
+.explain{background:var(--ink2);border-block:1px solid var(--line);margin-inline:-20px;padding-inline:20px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.card{background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card p{color:var(--mute);font-size:18px}
+.card .k{font-family:var(--body);font-size:34px;font-weight:600;color:var(--amber);line-height:1}
+.not{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:17px;color:var(--mute)}
+.not b{color:var(--bone);font-weight:600}
+.not span{border:1px dashed var(--line);padding:4px 12px;border-radius:999px}
+/* board + fichas */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.plinths{display:flex;justify-content:center;gap:4px;margin-top:28px}
+.pl{flex:1;max-width:110px;text-align:center;font-size:15px;color:var(--mute)}
+.pl img{width:100%;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 8px 6px #000a)}
+.pl{display:flex;flex-direction:column;align-items:center;gap:0}
+.pl em{display:block;width:78%;height:22px;margin-top:-12px;background:linear-gradient(#3a4356,#232a37);clip-path:polygon(22% 0,78% 0,100% 50%,78% 100%,22% 100%,0 50%)}
+.pl span{margin-top:8px;font-size:17px;color:var(--bone)}
+.rules{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+.rules li{display:grid;grid-template-columns:34px 1fr;gap:12px}
+.rules li b{display:grid;place-items:center;width:34px;height:38px;background:var(--amber);color:#1b1305;font-family:var(--display);font-size:15px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+/* cast */
+.hexes{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
+.hx{width:calc((100% - 12px)/3);max-width:104px;text-align:center;font-size:15px;line-height:1.25;color:var(--mute)}
+.hx div{width:100%;aspect-ratio:92/104;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--amber);padding:3px}
+.hx img{width:100%;height:100%;object-fit:cover;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);display:block}
+.hx.soon div{background:var(--line)}
+.hx.soon img{filter:grayscale(.6) brightness(.85)}
+.hx.soon span{color:var(--mute)}
+.hx.soon span::after{content:"Próximamente";display:block;font-size:13px;letter-spacing:.06em;color:var(--brass)}
+.hx span{display:block;margin-top:4px;color:var(--bone)}
+.leg{display:flex;gap:20px;flex-wrap:wrap;font-size:16px;margin-top:20px;color:var(--mute)}
+.leg i{display:inline-block;width:14px;height:16px;margin-right:8px;vertical-align:-3px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.sub{margin-top:36px;font-size:24px;font-weight:600}
+/* shots */
+.shots{display:flex;gap:18px;overflow-x:auto;padding-block:8px 16px;margin-top:28px;scroll-snap-type:x mandatory}
+.shots figure{margin:0;flex:0 0 min(420px,78%);scroll-snap-align:start}
+.shots img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.shots figcaption{font-size:16px;color:var(--mute);margin-top:8px}
+/* beta */
+.beta{background:var(--ink2);border-block:1px solid var(--line);margin-inline:-20px;padding-inline:20px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:34px;counter-reset:s}
+.steps div{padding:0 26px 0 0;position:relative;min-width:0}
+.steps div::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:50px;background:var(--amber);color:#1b1305;font:700 18px var(--body);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);margin-bottom:14px}
+.steps p{color:var(--mute);font-size:18px;margin-top:6px}
+/* faq */
+details{border-top:1px solid var(--line);padding-block:18px}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;font-size:20px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--amber)}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin-top:10px;max-width:62ch}
+footer{padding-block:40px;color:var(--mute);font-size:16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--line)}
+@media(max-width:860px){
+  .hero,.split{grid-template-columns:1fr}
+  .three,.steps{grid-template-columns:1fr;gap:28px}
+  .steps div{padding:0}
+  .phone.sm{right:0}
+  section{padding-block:52px}
+}
+@media(prefers-reduced-motion:no-preference){.phone,.shots img{transition:transform .35s,box-shadow .35s}.phone:hover{transform:translateY(-6px)}.shots img:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 40px #000a}}
+.mark{height:52px;width:auto;display:block}
+nav .brand{display:flex;align-items:center;gap:12px}
+.wm{display:block;width:min(100%,560px);height:auto;margin-top:14px;filter:drop-shadow(0 8px 16px #000a)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.crest-lg{width:120px;height:auto;display:block;margin-bottom:12px;filter:drop-shadow(0 6px 10px #000a)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--bone);width:48px;height:48px;font-size:26px;line-height:1;cursor:pointer}
+.menu-btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+nav{position:relative}
+@media(max-width:700px){
+ 
+ .menu-btn{display:block}
+ nav .links{display:none;position:absolute;right:0;top:100%;z-index:5;flex-direction:column;align-items:stretch;gap:0;background:var(--ink2);border:1px solid var(--line);min-width:200px}
+ nav .links.open{display:flex}
+ nav .links a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:21px}
+ nav .links a:last-child{border-bottom:0}
+}
+
+.btn{background:url(img/ui_boton_principal.webp) center/100% 100% no-repeat;clip-path:none;color:#2a1c05;font-size:22px;font-weight:600;padding:22px 60px;min-width:260px;text-align:center;text-shadow:0 1px 0 #ffffff55}
+.btn.ghost{background:url(img/ui_boton_secundario.webp) center/100% 100% no-repeat;color:var(--bone);text-shadow:0 1px 2px #000}
+
+.seal{background:url(img/ui_sello_hex.webp) center/100% 100% no-repeat;clip-path:none;width:96px;height:100px;color:#2a1c05}
+.rules li b{background:url(img/ui_sello_hex.webp) center/100% 100% no-repeat;clip-path:none;width:44px;height:46px;color:#2a1c05}
+.rules li{grid-template-columns:44px 1fr}
+.pl em{background:url(img/ui_base_ficha.webp) center/100% 100% no-repeat;clip-path:none;width:112%;height:auto;aspect-ratio:578/225;margin-top:-42%}
+.pl img{position:relative;z-index:1;width:84%}
+.pl{max-width:116px}
+
+.steps div::before{background:url(img/ui_sello_hex.webp) center/100% 100% no-repeat;clip-path:none;width:64px;height:68px;color:#2a1c05;font-size:24px}
+.card .k{display:grid;place-items:center;width:60px;height:64px;background:url(img/ui_sello_hex.webp) center/100% 100% no-repeat;color:#2a1c05;font-size:24px;font-weight:700}
+</style>
+
+<div class="w">
+<nav><span class="brand"><img class="mark" src="img/logo.webp" alt="Logo de Chaveton Studios"><b class="vh">Chaveton Studios</b></span><span class="links" id="menu"><a href="#">Estudio</a><a href="#">Juegos</a><a href="#beta">Escríbenos</a></span><button class="menu-btn" aria-label="Menú" aria-expanded="false" aria-controls="menu">☰</button></nav>
+
+<header class="hero">
+  <div>
+    <p class="eyebrow">Estrategia por turnos · Android: celulares y tablets</p>
+    <h1 class="vh">DominionHex</h1>
+    <img class="wm" src="img/wordmark.webp" alt="DominionHex">
+    <p class="tag">Un juego de estrategia por turnos sobre un tablero de hexágonos.</p>
+    <p class="lede">Es una aplicación gratuita. Se instala en tu celular o tablet Android y se juega con los dedos. No se juega desde esta página ni en computador. Próximamente en iOS y otras plataformas.</p>
+    <ul class="where">
+      <li><i>▸</i>Gratis · Android, celular y tablet</li>
+      <li><i>▸</i>Sin publicidad</li>
+      <li><i>▸</i>Beta cerrada, por invitación</li>
+    </ul>
+    <div class="cta">
+      <a class="btn" href="#beta">Pide acceso al beta</a>
+      <a class="btn ghost" href="#que-es">¿De qué se trata?</a>
+      <small>Próximamente en Google Play y en iOS. Hoy solo en beta cerrada.</small>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="phone"><img src="img/shot_partida.webp" alt="Partida de DominionHex en un celular, vista horizontal"></div>
+    <div class="phone sm"><img src="img/shot_menu.webp" alt="Menú principal de DominionHex"></div>
+    <p class="cap">Capturas reales de la app en un celular.</p>
+    
+  </div>
+</header>
+</div>
+
+<div class="explain" id="que-es"><div class="w"><section>
+  <p class="eyebrow">En resumen</p>
+  <h2>Qué es, dónde corre y cómo entras</h2>
+  <div class="three">
+    <div class="card"><span class="k">1</span><h3>Qué es</h3><p>Un juego de estrategia por turnos. Mueves tus fichas sobre un tablero de hexágonos y te enfrentas a rivales controlados por la IA. Cada ficha es un personaje.</p></div>
+    <div class="card"><span class="k">2</span><h3>Dónde corre</h3><p>En celulares y tablets Android, con pantalla táctil. Empezamos por Android y próximamente llegará a iOS. Tus datos quedan en tu dispositivo y no hay que crear cuenta.</p></div>
+    <div class="card"><span class="k">3</span><h3>Cómo entras</h3><p>Está en beta cerrada y es gratis. Pides acceso por correo y te invitamos a la prueba en Google Play.</p></div>
+  </div>
+  <p class="not"><b>Esta página no es el juego. Tampoco es:</b> <span>Jugar en el navegador</span> <span>Versión para PC</span> <span>Cuenta o pagos reales</span></p>
+</section></div></div>
+
+<div class="w">
+<section>
+  <div class="adfree"><span class="seal">✓</span><div><h2>Sin publicidad</h2><p class="lede">Ni anuncios ni ventanas que interrumpan la partida. Queremos mantenerlo así el mayor tiempo posible.</p></div></div>
+</section>
+<section style="padding-top:0">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Cómo se juega</p>
+      <h2>Piensa tu jugada. Mueve tu ficha.</h2>
+      <div class="modes"><div><h3>Contra la IA</h3><p>Elige a tu rival y enfréntalo.</p></div><div><h3>Dos jugadores</h3><p>En el mismo dispositivo.</p></div><div><h3>Contra reloj</h3><p>Para quien ya domina el tablero.</p></div></div>
+      <ul class="rules">
+        <li><b>1</b><p>Eliges tu personaje y a tu rival.</p></li>
+        <li><b>2</b><p>Juegan por turnos sobre el tablero hexagonal.</p></li>
+        <li><b>3</b><p>Cada personaje tiene su propia ficha y su estilo.</p></li>
+      </ul>
+      <div class="plinths">
+        <div class="pl"><img src="img/piece_explorador.webp" alt="Ficha Explorador"><em></em><span>Eliot</span></div>
+        <div class="pl"><img src="img/piece_miliciano.webp" alt="Ficha Miliciano"><em></em><span>Mateo</span></div>
+        <div class="pl"><img src="img/piece_portaestandarte.webp" alt="Ficha Portaestandarte"><em></em><span>Álvaro</span></div>
+        <div class="pl"><img src="img/piece_player_caballero.webp" alt="Ficha Ser Aldric"><em></em><span>Aldric</span></div>
+        <div class="pl"><img src="img/piece_player_ghurza.webp" alt="Ficha Ghurza"><em></em><span>Ghurza</span></div>
+      </div>
+    </div>
+    <div class="phone"><img src="img/shot_ficha.webp" alt="Pantalla de ficha de un personaje"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <p class="eyebrow">Elenco</p>
+  <h2>Personajes y rivales</h2>
+  <p class="lede" style="margin-top:12px">Tres personajes y tres rivales ya se pueden usar en el beta. El resto llegará más adelante como personajes de pago dentro del juego, fuera del beta.</p>
+  <p class="sub">Tu personaje</p>
+  <div class="hexes">
+    <div class="hx"><div><img src="img/ui_avatar_eliot_v1.webp" alt=""></div><span>Eliot</span></div>
+    <div class="hx"><div><img src="img/ui_avatar_mateo_v1.webp" alt=""></div><span>Mateo</span></div>
+    <div class="hx"><div><img src="img/ui_avatar_alvaro_v1.webp" alt=""></div><span>Álvaro</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_livia_v1.webp" alt=""></div><span>Livia</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_asha_v1.webp" alt=""></div><span>Asha</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_kin_v1.webp" alt=""></div><span>Ix K'in</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_bran_v1.webp" alt=""></div><span>Bran</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_sargal_v1.webp" alt=""></div><span>Sargal</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_nefer_v1.webp" alt=""></div><span>Nefer</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_hana_v1.webp" alt=""></div><span>Kage</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_gorv_v1.webp" alt=""></div><span>Gorv</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_nidra_v1.webp" alt=""></div><span>Nidra</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_ghurza_v1.webp" alt=""></div><span>Ghurza</span></div>
+  </div>
+  <p class="sub">Tu rival</p>
+  <div class="hexes">
+    <div class="hx"><div><img src="img/ui_rival_pipo_v1.webp" alt=""></div><span>Pipo</span></div>
+    <div class="hx"><div><img src="img/ui_rival_harald_v1.webp" alt=""></div><span>Harald</span></div>
+    <div class="hx"><div><img src="img/ui_rival_nahuel_v2.webp" alt=""></div><span>Nahuel</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_marea_v1.webp" alt=""></div><span>Marea</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_xorath_v1.webp" alt=""></div><span>Xo'Rath</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_kaede_v1.webp" alt=""></div><span>Kaede</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_centinela7_v1.webp" alt=""></div><span>Centinela-7</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_adelantado_v2.webp" alt=""></div><span>El Codicioso</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_sangrenoche_v1.webp" alt=""></div><span>Condesa Ambiciosa</span></div>
+  </div>
+  <p class="leg"><span><i style="background:var(--amber)"></i>Disponible ahora</span><span><i style="background:var(--line)"></i>Próximamente a la venta</span></p>
+</section>
+
+<section style="padding-top:0">
+  <div class="scn"><div><p class="eyebrow">Próximamente a la venta</p><h2 style="margin-top:10px">Nuevos escenarios</h2><p class="lede" style="margin-top:12px">Estamos trabajando en nuevas ambientaciones para el tablero. Todavía no están a la venta ni forman parte del beta: es un adelanto del arte.</p></div><img src="img/scenario_vikingo_proximamente.jpg" alt="Escenario vikingo, próximamente"></div>
+</section>
+<section style="padding-top:0">
+  <p class="eyebrow">Dentro de la app</p>
+  <h2>Así se ve en el teléfono</h2>
+  <div class="shots">
+    <figure><img src="img/shot_avatar.webp" alt="Elegir avatar"><figcaption>Elige tu personaje.</figcaption></figure>
+    <figure><img src="img/shot_ficha.webp" alt="Elegir ficha"><figcaption>Elige su ficha.</figcaption></figure>
+    <figure><img src="img/shot_tienda.webp" alt="Tienda"><figcaption>Lo que viene: próximamente a la venta.</figcaption></figure>
+    <figure><img src="img/shot_detalle.webp" alt="Detalle de personaje"><figcaption>Detalle de cada personaje.</figcaption></figure>
+  </div>
+</section>
+</div>
+
+<div class="beta" id="beta"><div class="w"><section>
+  <p class="eyebrow">Beta cerrada</p>
+  <h2>Cómo entrar al beta</h2>
+  <p class="lede" style="margin-top:12px">Las pruebas son por invitación y se hacen en tu propio celular.</p>
+  <div class="steps">
+    <div><h3>Escríbenos</h3><p>Pide participar. Indica el correo de tu cuenta de Google Play y el modelo de tu teléfono o tablet.</p></div>
+    <div><h3>Te invitamos</h3><p>Te sumamos a la prueba cerrada de Google Play y te avisamos por correo.</p></div>
+    <div><h3>Instala y juega</h3><p>Descargas la app desde esa invitación y juegas en tu dispositivo Android.</p></div>
+  </div>
+  <div class="cta" style="margin-top:36px"><a class="btn" href="#beta">Solicita participar en el beta</a><small>En el sitio real este botón abre tu correo con el mensaje listo.</small></div>
+</section></div></div>
+
+<div class="w">
+<section>
+  <p class="eyebrow">Preguntas</p>
+  <h2 style="margin-bottom:28px">Lo que más nos preguntan</h2>
+  <details open><summary>¿Se juega desde esta página?</summary><p>No. Esta página solo presenta el juego. DominionHex es una app que se instala en un celular o tablet Android.</p></details>
+  <details><summary>¿Y para iPhone?</summary><p>Próximamente en iOS. Empezamos por Android, en celulares y tablets, y la idea es llegar a todas las plataformas. De computador aún no tenemos fecha.</p></details>
+  <details><summary>¿Necesito internet para jugar?</summary><p>No. La partida y tus datos se guardan en tu dispositivo. Necesitas conexión para descargar la app.</p></details>
+  <details><summary>¿Tiene publicidad?</summary><p>No. DominionHex no tiene anuncios y queremos mantenerlo así el mayor tiempo posible.</p></details>
+  <details><summary>¿Cuesta algo?</summary><p>No. El juego y el beta son gratis. Más adelante habrá personajes de pago dentro del juego, pero eso no está en el beta: ahí no se hacen pagos reales.</p></details>
+  <details><summary>¿Cuándo sale en las tiendas?</summary><p>Todavía no hay fecha. Por ahora solo se puede probar en la beta cerrada.</p></details>
+</section>
+<footer><span>© 2026 Chaveton Studios</span><span><a href="#">Juegos</a> · <a href="#">Política de privacidad</a> · <a href="#beta">Contacto</a></span></footer>
+</div>
+<script>
+document.querySelectorAll('.menu-btn').forEach(function(b){var l=document.querySelector('nav .links');
+ b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'×':'☰'});
+ l.addEventListener('click',function(e){if(e.target.tagName==='A'){l.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰'}});});
+</script>
