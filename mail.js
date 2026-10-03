@@ -15,8 +15,7 @@
     "Quiero participar en las pruebas del beta (closed testing) de DominionHex.",
     "",
     "Correo de la cuenta de Google Play:",
-    "Correo de TestFlight (si la prueba es en iPhone):",
-    "Modelo de teléfono:",
+    "Modelo de teléfono o tablet Android:",
     "",
     "Gracias."
   ].join("\n");

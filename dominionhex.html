@@ -1,369 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DominionHex — Chaveton Studios</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.ico">
 <script src="mail.js" defer></script>
+<script src="nav.js" defer></script>
+</head>
+<body class="gamepage">
+<div class="w">
+<nav class="site">
+  <a class="brand" href="index.html"><img class="mark" src="img/logo.webp" width="1200" height="786" alt="Logo de Chaveton Studios"><b class="vh">Chaveton Studios</b></a>
+  <button class="menu-btn" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu">☰</button>
+  <div class="links" id="menu">
+    <a href="index.html#estudio">Estudio</a>
+    <a href="juegos.html">Juegos</a>
+    <a href="#" data-mailto="beta">Escríbenos</a>
+  </div>
+</nav>
 
-<div class="wrap">
-
-  <header class="site">
-    <a href="index.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;">
-      <img class="mark" src="logo.png" alt="Chaveton Studios">
-      <div class="studio-name">CHAVETON&nbsp;STUDIOS</div>
-    </a>
-    <nav class="top">
-      <a href="index.html#estudio">Estudio</a>
-      <a href="juegos.html" class="current">Juegos</a>
-      <a href="#" data-mailto="beta">Escríbenos</a>
-    </nav>
-  </header>
-
-  <span class="crumb"><a href="juegos.html">Juegos</a> / DominionHex</span>
-
-  <section class="game-hero">
-    <img class="crest-lg" src="img/crest_hex.png" alt="Emblema de DominionHex">
-    <span class="badge">En Beta</span>
-    <h1 class="wordmark">DOMINION HEX</h1>
-    <p class="lede">Estrategia por turnos sobre un tablero hexagonal. Reglas que se explican en una mesa, decisiones que importan en cada turno.</p>
-    <p class="device">Para celular y tablet. No está disponible para computador.</p>
-    <div class="ctas">
-      <a class="btn primary" href="#" data-mailto="beta">Solicita participar en las pruebas del beta</a>
-    </div>
-  </section>
-
-  <div class="panel">
-    <span class="mote" aria-hidden="true"></span>
-    <div class="section-head">
-      <h2>Cómo se juega</h2>
-    </div>
-    <p>Mueves, expandes territorio y disputas el control del tablero hexagonal. Tres formas de jugar:</p>
-    <p><strong>Ficha técnica.</strong> DominionHex es para celular y tablet. No se juega en computador.</p>
-
-    <div class="modes-grid">
-      <div class="mode-card">
-        <div class="glyph" aria-hidden="true">1J</div>
-        <h3>Contra la IA</h3>
-        <p>Partida individual contra un rival con nombre, retrato y ficha.</p>
-      </div>
-      <div class="mode-card">
-        <div class="glyph" aria-hidden="true">2J</div>
-        <h3>Local a dos jugadores</h3>
-        <p>Mismo dispositivo, un tablero de por medio — para jugar como un juego de mesa de verdad.</p>
-      </div>
-      <div class="mode-card">
-        <img src="img/time_attack_seal.png" alt="Sello de Contra Reloj">
-        <h3>Contra Reloj</h3>
-        <p>Para quienes ya dominan el tablero: mismas reglas, con el reloj corriendo.</p>
-      </div>
+<header class="hero">
+  <div>
+    <p class="eyebrow">Estrategia por turnos · Android: celulares y tablets</p>
+    <h1 class="vh">DominionHex</h1>
+    <img class="wm" src="img/wordmark.webp" width="1172" height="299" alt="DominionHex">
+    <p class="tag">Un juego de estrategia por turnos sobre un tablero de hexágonos.</p>
+    <p class="lede">Es una aplicación gratuita. Se instala en tu celular o tablet Android y se juega con los dedos. No se juega desde esta página ni en computador. Próximamente en iOS y otras plataformas.</p>
+    <ul class="where">
+      <li><i>▸</i>Gratis · Android, celular y tablet</li>
+      <li><i>▸</i>Sin publicidad</li>
+      <li><i>▸</i>Beta cerrada, por invitación</li>
+    </ul>
+    <div class="cta">
+      <a class="btn" href="#" data-mailto="beta">Pide acceso al beta</a>
+      <a class="btn ghost" href="#que-es">¿De qué se trata?</a>
+      <small>Próximamente en Google Play y en iOS. Hoy solo en beta cerrada.</small>
     </div>
   </div>
-
-  <div class="panel">
-    <span class="mote" aria-hidden="true"></span>
-    <div class="section-head">
-      <h2>En pantalla</h2>
-    </div>
-    <p>Capturas del beta en celular. La tienda muestra «Próximamente a la venta»: todavía no hay precios ni pagos.</p>
-    <div class="shot-grid">
-      <figure>
-        <img src="img/shot_menu.webp" alt="Menú principal de DominionHex" width="1600" height="943">
-        <figcaption>Menú principal, Galaxy S9</figcaption>
-      </figure>
-      <figure>
-        <img src="img/shot_partida.webp" alt="Partida de DominionHex contra Pipo" width="1600" height="943">
-        <figcaption>Partida contra Pipo, Galaxy S9</figcaption>
-      </figure>
-      <figure>
-        <img src="img/shot_avatar.webp" alt="Pantalla Elegir avatar, con Eliot, Mateo y Álvaro disponibles" width="1600" height="865">
-        <figcaption>Elegir avatar, iPhone</figcaption>
-      </figure>
-      <figure>
-        <img src="img/shot_ficha.webp" alt="Pestaña Ficha, con las tres fichas gratis y el resto con candado" width="1600" height="865">
-        <figcaption>Elegir ficha, iPhone</figcaption>
-      </figure>
-      <figure>
-        <img src="img/shot_tienda.webp" alt="Tienda de cosméticos en Próximamente a la venta" width="1600" height="865">
-        <figcaption>Tienda, próximamente a la venta, iPhone</figcaption>
-      </figure>
-      <figure>
-        <img src="img/shot_detalle.webp" alt="Detalle de la ficha de Livia, la Legionaria" width="1600" height="865">
-        <figcaption>Detalle de una ficha, iPhone</figcaption>
-      </figure>
-    </div>
+  <div class="stage">
+    <div class="phone"><img src="img/shot_partida.webp" width="1600" height="943" alt="Partida de DominionHex en un celular, vista horizontal" loading="lazy"></div>
+    <div class="phone sm"><img src="img/shot_menu.webp" width="1600" height="943" alt="Menú principal de DominionHex" loading="lazy"></div>
+    <p class="cap">Capturas reales de la app en un celular.</p>
   </div>
-
-  <div class="panel">
-    <span class="mote" aria-hidden="true"></span>
-    <div class="section-head">
-      <h2>Tus fichas</h2>
-    </div>
-    <p>Estas tres ya se pueden usar. Eliot Sendaluz, con la ficha Explorador, es la identidad por defecto. Cuando el resto esté a la venta, seguirá siendo solo cosmética: no cambia las reglas ni da ventaja.</p>
-
-    <div class="cast-grid scenario">
-      <div class="cast-card">
-        <img src="img/piece_explorador.webp" alt="Ficha Explorador de Eliot Sendaluz">
-        <h4>Eliot Sendaluz</h4>
-        <span class="tag">Explorador · Disponible ahora</span>
-      </div>
-      <div class="cast-card">
-        <img src="img/piece_miliciano.webp" alt="Ficha Miliciano de Mateo Escudoazul">
-        <h4>Mateo Escudoazul</h4>
-        <span class="tag">Miliciano · Disponible ahora</span>
-      </div>
-      <div class="cast-card">
-        <img src="img/piece_portaestandarte.webp" alt="Ficha Portaestandarte de Álvaro Plumablanca">
-        <h4>Álvaro Plumablanca</h4>
-        <span class="tag">Portaestandarte · Disponible ahora</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel">
-    <span class="mote" aria-hidden="true"></span>
-    <div class="section-head">
-      <h2>Rivales</h2>
-    </div>
-    <p>Diez rivales, con retrato, nombre y ficha de tablero.</p>
-
-    <h3 class="diff">Fácil</h3>
-    <div class="roster">
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_pipo_v1.webp" alt="Retrato de Pipo, el Duende Travieso">
-          <img src="img/piece_rival_pipo.webp" alt="Ficha de Pipo, el Duende Travieso">
-        </div>
-        <h4>Pipo, el Duende Travieso</h4>
-        <span class="tag">Disponible ahora</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/hud_portrait_generic_ai_v2.webp" alt="Retrato de IA">
-          <img src="img/piece_golem_ia.webp" alt="Ficha de IA">
-        </div>
-        <h4>IA</h4>
-        <span class="tag">Disponible ahora</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_marea_v1.webp" alt="Retrato de Capitana Marea">
-          <img src="img/piece_rival_marea.webp" alt="Ficha de Capitana Marea">
-        </div>
-        <h4>Capitana Marea</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_xorath_v1.webp" alt="Retrato de Xo'Rath, el Visitante">
-          <img src="img/piece_rival_xorath.webp" alt="Ficha de Xo'Rath, el Visitante">
-        </div>
-        <h4>Xo'Rath, el Visitante</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-    </div>
-
-    <h3 class="diff">Medio</h3>
-    <div class="roster">
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_harald_v1.webp" alt="Retrato de Harald el Saqueador">
-          <img src="img/piece_rival_harald.webp" alt="Ficha de Harald el Saqueador">
-        </div>
-        <h4>Harald el Saqueador</h4>
-        <span class="tag">Disponible ahora</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_adelantado_v2.webp" alt="Retrato de El Codicioso">
-          <img src="img/piece_rival_adelantado.webp" alt="Ficha de El Codicioso">
-        </div>
-        <h4>El Codicioso</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_sangrenoche_v1.webp" alt="Retrato de Condesa Ambiciosa">
-          <img src="img/piece_rival_sangrenoche.webp" alt="Ficha de Condesa Ambiciosa">
-        </div>
-        <h4>Condesa Ambiciosa</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-    </div>
-
-    <h3 class="diff">Difícil</h3>
-    <div class="roster">
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_nahuel_v2.webp" alt="Retrato de Toqui Nahuel">
-          <img src="img/piece_rival_nahuel.webp" alt="Ficha de Toqui Nahuel">
-        </div>
-        <h4>Toqui Nahuel</h4>
-        <span class="tag">Disponible ahora</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_kaede_v1.webp" alt="Retrato de Kaede, la Sombra">
-          <img src="img/piece_rival_kaede.webp" alt="Ficha de Kaede, la Sombra">
-        </div>
-        <h4>Kaede, la Sombra</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_rival_centinela7_v1.webp" alt="Retrato de Centinela-7">
-          <img src="img/piece_rival_centinela7.webp" alt="Ficha de Centinela-7">
-        </div>
-        <h4>Centinela-7</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-    </div>
-  </div>
-
-  <div class="panel">
-    <span class="mote" aria-hidden="true"></span>
-    <div class="section-head">
-      <h2>Tu identidad</h2>
-    </div>
-    <p>La cara y la ficha se eligen por separado. Disponible ahora es lo que ya puedes usar. El resto aparece en el juego como próximamente a la venta.</p>
-
-    <div class="roster">
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_eliot_v1.webp" alt="Retrato de Eliot Sendaluz">
-          <img src="img/piece_explorador.webp" alt="Ficha de Eliot Sendaluz">
-        </div>
-        <h4>Eliot Sendaluz</h4>
-        <span class="tag">Disponible ahora</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_mateo_v1.webp" alt="Retrato de Mateo Escudoazul">
-          <img src="img/piece_miliciano.webp" alt="Ficha de Mateo Escudoazul">
-        </div>
-        <h4>Mateo Escudoazul</h4>
-        <span class="tag">Disponible ahora</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_alvaro_v1.webp" alt="Retrato de Álvaro Plumablanca">
-          <img src="img/piece_portaestandarte.webp" alt="Ficha de Álvaro Plumablanca">
-        </div>
-        <h4>Álvaro Plumablanca</h4>
-        <span class="tag">Disponible ahora</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/hud_portrait_generic_human_v2.webp" alt="Retrato de Ser Aldric Escudoférreo">
-          <img src="img/piece_player_caballero.webp" alt="Ficha de Ser Aldric Escudoférreo">
-        </div>
-        <h4>Ser Aldric Escudoférreo</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_livia_v1.webp" alt="Retrato de Livia, la Legionaria">
-          <img src="img/piece_player_livia.webp" alt="Ficha de Livia, la Legionaria">
-        </div>
-        <h4>Livia, la Legionaria</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_asha_v1.webp" alt="Retrato de Asha de la Ruta">
-          <img src="img/piece_player_asha.webp" alt="Ficha de Asha de la Ruta">
-        </div>
-        <h4>Asha de la Ruta</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_kin_v1.webp" alt="Retrato de Ix K'in">
-          <img src="img/piece_player_kin.webp" alt="Ficha de Ix K'in">
-        </div>
-        <h4>Ix K'in</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_bran_v1.webp" alt="Retrato de Bran Cuervotuerce">
-          <img src="img/piece_player_bran.webp" alt="Ficha de Bran Cuervotuerce">
-        </div>
-        <h4>Bran Cuervotuerce</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_sargal_v1.webp" alt="Retrato de Sargal el Estepario">
-          <img src="img/piece_player_sargal.webp" alt="Ficha de Sargal el Estepario">
-        </div>
-        <h4>Sargal el Estepario</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_nefer_v1.webp" alt="Retrato de Nefer, Ojo de Loto">
-          <img src="img/piece_player_nefer.webp" alt="Ficha de Nefer, Ojo de Loto">
-        </div>
-        <h4>Nefer, Ojo de Loto</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_hana_v1.webp" alt="Retrato de Kage Takamaru">
-          <img src="img/piece_player_hana.webp" alt="Ficha de Kage Takamaru">
-        </div>
-        <h4>Kage Takamaru</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_gorv_v1.webp" alt="Retrato de Gorv Colmillo">
-          <img src="img/piece_player_gorv.webp" alt="Ficha de Gorv Colmillo">
-        </div>
-        <h4>Gorv Colmillo</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_nidra_v1.webp" alt="Retrato de Nidra, la Colmena">
-          <img src="img/piece_player_nidra.webp" alt="Ficha de Nidra, la Colmena">
-        </div>
-        <h4>Nidra, la Colmena</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-      <article class="roster-card">
-        <div class="roster-art">
-          <img src="img/ui_avatar_ghurza_v1.webp" alt="Retrato de Ghurza">
-          <img src="img/piece_player_ghurza.webp" alt="Ficha de Ghurza">
-        </div>
-        <h4>Ghurza</h4>
-        <span class="tag sale">Próximamente a la venta</span>
-      </article>
-    </div>
-  </div>
-
-  <div class="panel">
-    <span class="mote" aria-hidden="true"></span>
-    <div class="section-head">
-      <h2>Próximamente: escenarios</h2>
-      <span class="badge muted">Vista previa</span>
-    </div>
-    <p>Ya estamos trabajando en nuevas ambientaciones para futuros escenarios comprables. Todavía no están a la venta ni son parte de la Beta — esto es solo un adelanto del arte.</p>
-
-    <div class="scenario-soon">
-      <img src="img/scenario_vikingo_proximamente.jpg" alt="Escenario vikingo (próximamente)">
-      <div class="name">Costa vikinga</div>
-    </div>
-  </div>
-
-  <footer>
-    <span>© 2026 Chaveton Studios</span>
-    <span class="links">
-      <a href="privacy.html">Política de privacidad</a>
-      <a href="#" data-mailto="beta">Escríbenos</a>
-    </span>
-  </footer>
-
+</header>
 </div>
+
+<div class="explain" id="que-es"><div class="w"><section>
+  <p class="eyebrow">En resumen</p>
+  <h2>Qué es, dónde corre y cómo entras</h2>
+  <div class="three">
+    <div class="card"><span class="k">1</span><h3>Qué es</h3><p>Un juego de estrategia por turnos. Mueves tus fichas sobre un tablero de hexágonos y te enfrentas a rivales controlados por la IA. Cada ficha es un personaje.</p></div>
+    <!-- Si sale la versión con Firebase, actualizar esta tarjeta: hoy la partida no usa internet y no hay cuenta. -->
+    <div class="card"><span class="k">2</span><h3>Dónde corre</h3><p>En celulares y tablets Android, con pantalla táctil. Empezamos por Android y próximamente llegará a iOS. Tus datos quedan en tu dispositivo y no hay que crear cuenta.</p></div>
+    <div class="card"><span class="k">3</span><h3>Cómo entras</h3><p>Está en beta cerrada y es gratis. Pides acceso por correo y te invitamos a la prueba en Google Play.</p></div>
+  </div>
+  <p class="not"><b>Esta página no es el juego. Tampoco es:</b> <span>Jugar en el navegador</span> <span>Versión para PC</span> <span>Cuenta o pagos reales</span></p>
+</section></div></div>
+
+<div class="w">
+<section>
+  <div class="adfree"><span class="seal">✓</span><div><h2>Sin publicidad</h2><p class="lede">Ni anuncios ni ventanas que interrumpan la partida. Queremos mantenerlo así el mayor tiempo posible.</p></div></div>
+</section>
+<section style="padding-top:0">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Cómo se juega</p>
+      <h2>Piensa tu jugada. Mueve tu ficha.</h2>
+      <div class="modes"><div><h3>Contra la IA</h3><p>Elige a tu rival y enfréntalo.</p></div><div><h3>Dos jugadores</h3><p>En el mismo dispositivo.</p></div><div><h3>Contra reloj</h3><p>Para quien ya domina el tablero.</p></div></div>
+      <ul class="rules">
+        <li><b>1</b><p>Eliges tu personaje y a tu rival.</p></li>
+        <li><b>2</b><p>Juegan por turnos sobre el tablero hexagonal.</p></li>
+        <li><b>3</b><p>Cada personaje tiene su propia ficha y su estilo.</p></li>
+      </ul>
+      <div class="plinths">
+        <div class="pl"><img src="img/piece_explorador.webp" width="768" height="768" alt="Ficha Explorador"><em></em><span>Eliot</span></div>
+        <div class="pl"><img src="img/piece_miliciano.webp" width="768" height="768" alt="Ficha Miliciano"><em></em><span>Mateo</span></div>
+        <div class="pl"><img src="img/piece_portaestandarte.webp" width="768" height="768" alt="Ficha Portaestandarte"><em></em><span>Álvaro</span></div>
+        <div class="pl"><img src="img/piece_player_caballero.webp" width="768" height="768" alt="Ficha Ser Aldric"><em></em><span>Aldric</span></div>
+        <div class="pl"><img src="img/piece_player_ghurza.webp" width="768" height="768" alt="Ficha Ghurza"><em></em><span>Ghurza</span></div>
+      </div>
+    </div>
+    <div class="phone"><img src="img/shot_ficha.webp" width="1600" height="865" alt="Pantalla de ficha de un personaje" loading="lazy"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <p class="eyebrow">Elenco</p>
+  <h2>Personajes y rivales</h2>
+  <p class="lede" style="margin-top:12px">Tres personajes y tres rivales ya se pueden usar en el beta. El resto llegará más adelante como personajes de pago dentro del juego, fuera del beta.</p>
+  <p class="sub">Tu personaje</p>
+  <div class="hexes">
+    <div class="hx"><div><img src="img/ui_avatar_eliot_v1.webp" width="512" height="512" alt=""></div><span>Eliot</span></div>
+    <div class="hx"><div><img src="img/ui_avatar_mateo_v1.webp" width="512" height="512" alt=""></div><span>Mateo</span></div>
+    <div class="hx"><div><img src="img/ui_avatar_alvaro_v1.webp" width="512" height="512" alt=""></div><span>Álvaro</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_livia_v1.webp" width="512" height="512" alt=""></div><span>Livia</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_asha_v1.webp" width="512" height="512" alt=""></div><span>Asha</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_kin_v1.webp" width="512" height="512" alt=""></div><span>Ix K'in</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_bran_v1.webp" width="512" height="512" alt=""></div><span>Bran</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_sargal_v1.webp" width="512" height="512" alt=""></div><span>Sargal</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_nefer_v1.webp" width="512" height="512" alt=""></div><span>Nefer</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_hana_v1.webp" width="512" height="512" alt=""></div><span>Kage</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_gorv_v1.webp" width="512" height="512" alt=""></div><span>Gorv</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_nidra_v1.webp" width="512" height="512" alt=""></div><span>Nidra</span></div>
+    <div class="hx soon"><div><img src="img/ui_avatar_ghurza_v1.webp" width="512" height="512" alt=""></div><span>Ghurza</span></div>
+  </div>
+  <p class="sub">Tu rival</p>
+  <div class="hexes">
+    <div class="hx"><div><img src="img/ui_rival_pipo_v1.webp" width="512" height="512" alt=""></div><span>Pipo</span></div>
+    <div class="hx"><div><img src="img/ui_rival_harald_v1.webp" width="512" height="512" alt=""></div><span>Harald</span></div>
+    <div class="hx"><div><img src="img/ui_rival_nahuel_v2.webp" width="512" height="512" alt=""></div><span>Nahuel</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_marea_v1.webp" width="512" height="512" alt=""></div><span>Marea</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_xorath_v1.webp" width="512" height="512" alt=""></div><span>Xo'Rath</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_kaede_v1.webp" width="512" height="512" alt=""></div><span>Kaede</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_centinela7_v1.webp" width="512" height="512" alt=""></div><span>Centinela-7</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_adelantado_v2.webp" width="512" height="512" alt=""></div><span>El Codicioso</span></div>
+    <div class="hx soon"><div><img src="img/ui_rival_sangrenoche_v1.webp" width="512" height="512" alt=""></div><span>Condesa Ambiciosa</span></div>
+  </div>
+  <p class="leg"><span><i style="background:var(--amber)"></i>Disponible ahora</span><span><i style="background:var(--line)"></i>Próximamente a la venta</span></p>
+</section>
+
+<section style="padding-top:0">
+  <div class="scn"><div><p class="eyebrow">Próximamente a la venta</p><h2 style="margin-top:10px">Nuevos escenarios</h2><p class="lede" style="margin-top:12px">Estamos trabajando en nuevas ambientaciones para el tablero. Todavía no están a la venta ni forman parte del beta: es un adelanto del arte.</p></div><img src="img/scenario_vikingo_proximamente.jpg" width="900" height="507" alt="Escenario vikingo, próximamente"></div>
+</section>
+<section style="padding-top:0">
+  <p class="eyebrow">Dentro de la app</p>
+  <h2>Así se ve en el teléfono</h2>
+  <div class="shots">
+    <figure><img src="img/shot_avatar.webp" width="1600" height="865" alt="Elegir avatar" loading="lazy"><figcaption>Elige tu personaje.</figcaption></figure>
+    <figure><img src="img/shot_ficha.webp" width="1600" height="865" alt="Elegir ficha" loading="lazy"><figcaption>Elige su ficha.</figcaption></figure>
+    <figure><img src="img/shot_tienda.webp" width="1600" height="865" alt="Tienda" loading="lazy"><figcaption>Lo que viene: próximamente a la venta.</figcaption></figure>
+    <figure><img src="img/shot_detalle.webp" width="1600" height="865" alt="Detalle de personaje" loading="lazy"><figcaption>Detalle de cada personaje.</figcaption></figure>
+  </div>
+</section>
+</div>
+
+<div class="beta" id="beta"><div class="w"><section>
+  <p class="eyebrow">Beta cerrada</p>
+  <h2>Cómo entrar al beta</h2>
+  <p class="lede" style="margin-top:12px">Las pruebas son por invitación y se hacen en tu propio celular.</p>
+  <div class="steps">
+    <div><h3>Escríbenos</h3><p>Pide participar. Indica el correo de tu cuenta de Google Play y el modelo de tu teléfono o tablet.</p></div>
+    <div><h3>Te invitamos</h3><p>Te sumamos a la prueba cerrada de Google Play y te avisamos por correo.</p></div>
+    <div><h3>Instala y juega</h3><p>Descargas la app desde esa invitación y juegas en tu dispositivo Android.</p></div>
+  </div>
+  <div class="cta" style="margin-top:36px"><a class="btn" href="#" data-mailto="beta">Solicita participar en el beta</a></div>
+</section></div></div>
+
+<div class="w">
+<section>
+  <p class="eyebrow">Preguntas</p>
+  <h2 style="margin-bottom:28px">Lo que más nos preguntan</h2>
+  <details open><summary>¿Se juega desde esta página?</summary><p>No. Esta página solo presenta el juego. DominionHex es una app que se instala en un celular o tablet Android.</p></details>
+  <details><summary>¿Y para iPhone?</summary><p>Próximamente en iOS. Empezamos por Android, en celulares y tablets, y la idea es llegar a todas las plataformas. De computador aún no tenemos fecha.</p></details>
+  <details>
+    <summary>¿Necesito internet para jugar?</summary>
+    <!-- Si sale la versión con Firebase, actualizar esta respuesta: hoy la partida no usa internet y no hay cuenta. -->
+    <p>No. La partida y tus datos se guardan en tu dispositivo. Necesitas conexión para descargar la app.</p>
+  </details>
+  <details><summary>¿Tiene publicidad?</summary><p>No. DominionHex no tiene anuncios y queremos mantenerlo así el mayor tiempo posible.</p></details>
+  <details><summary>¿Cuesta algo?</summary><p>No. El juego y el beta son gratis. Más adelante habrá personajes de pago dentro del juego, pero eso no está en el beta: ahí no se hacen pagos reales.</p></details>
+  <details><summary>¿Cuándo sale en las tiendas?</summary><p>Todavía no hay fecha. Por ahora solo se puede probar en la beta cerrada.</p></details>
+</section>
+<footer class="site"><span>© 2026 Chaveton Studios</span><span><a href="juegos.html">Juegos</a> · <a href="privacy.html">Política de privacidad</a> · <a href="#" data-mailto="beta">Contacto</a></span></footer>
+</div>
+</body>
+</html>

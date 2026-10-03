@@ -1,84 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chaveton Studios</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.ico">
 <script src="mail.js" defer></script>
-
-<div class="wrap">
-
-  <header class="site">
-    <img class="mark" src="logo.png" alt="Chaveton Studios">
-    <div class="studio-name">CHAVETON&nbsp;STUDIOS</div>
-    <nav class="top">
-      <a href="#estudio">Estudio</a>
-      <a href="juegos.html">Juegos</a>
-      <a href="#" data-mailto="beta">Escríbenos</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <img class="emblem" src="logo.png" alt="Emblema Chaveton Studios">
-    <span class="eyebrow">Estudio independiente de videojuegos</span>
-    <h1>Fácil de aprender.<br><em>Difícil de dominar.</em></h1>
-    <p class="lede">Chaveton Studios diseña juegos memorables por la calidad de sus ideas, no por la cantidad de funciones que acumulan.</p>
-    <div class="ctas">
-      <a class="btn primary" href="#" data-mailto="beta">Solicita participar en las pruebas del beta</a>
-      <a class="btn ghost" href="dominionhex.html">Ver DominionHex</a>
-    </div>
-  </section>
-
-  <div class="panel" id="estudio">
-    <span class="mote" aria-hidden="true"></span>
-    <div class="section-head">
-      <h2>Sobre el estudio</h2>
-    </div>
-    <p>Chaveton Studios es un estudio independiente de desarrollo de videojuegos, orientado a crear experiencias accesibles y profundas: fáciles de aprender, difíciles de dominar, y sin pagar para ganar.</p>
-
-    <div class="pillars">
-      <div class="pillar">
-        <span class="num">I</span>
-        <h3>Ideas, no funciones</h3>
-        <p>La calidad de una idea importa más que la cantidad de características alrededor.</p>
-      </div>
-      <div class="pillar">
-        <span class="num">II</span>
-        <h3>Lo simple, bien hecho</h3>
-        <p>Entre varias soluciones válidas, elegimos siempre la más simple que resuelva bien el problema.</p>
-      </div>
-      <div class="pillar">
-        <span class="num">III</span>
-        <h3>Sin pagar para ganar</h3>
-        <p>Ningún juego del estudio vende ventajas competitivas. Se gana jugando, no pagando.</p>
-      </div>
-    </div>
-
-    <p style="margin-top:26px;font-family:var(--font-display);color:var(--gold-light);font-size:1rem;">En el fondo, creemos en la grandeza de las cosas simples.</p>
+<script src="nav.js" defer></script>
+</head>
+<body class="home">
+<div class="hex-bg"><div class="w">
+<nav class="site">
+  <a class="brand" href="index.html"><img class="mark" src="img/logo.webp" width="1200" height="786" alt="Logo de Chaveton Studios"><b class="vh">Chaveton Studios</b></a>
+  <button class="menu-btn" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu">☰</button>
+  <div class="links" id="menu">
+    <a href="index.html#estudio">Estudio</a>
+    <a href="index.html#juegos">Juegos</a>
+    <a href="#" data-mailto="beta">Escríbenos</a>
   </div>
-
-  <div class="panel game" id="juegos">
-    <span class="mote" aria-hidden="true"></span>
-    <div class="section-head">
-      <h2>Nuestro primer título</h2>
-      <span class="badge">En Beta</span>
-    </div>
-    <div class="game-teaser">
-      <img class="game-teaser-crest" src="img/crest_hex.png" alt="Emblema de DominionHex">
-      <div>
-        <h3>DominionHex</h3>
-        <p>Estrategia por turnos sobre un tablero hexagonal, para celular y tablet. Contra la IA, en partidas locales a dos jugadores, o a contrarreloj para quienes ya dominan el tablero.</p>
-        <a class="btn ghost" href="dominionhex.html">Ver DominionHex →</a>
-      </div>
-    </div>
+</nav>
+<header class="hero">
+  <div>
+    <p class="eyebrow">Estudio independiente de videojuegos</p>
+    <h1>Fácil de aprender. Difícil de dominar.</h1>
+    <p class="lede">Diseñamos juegos memorables por la calidad de sus ideas, no por la cantidad de funciones que acumulan. Sin publicidad y sin pagar para ganar.</p>
+    <div class="cta"><a class="btn" href="index.html#juegos">Conoce DominionHex</a><a class="btn ghost" href="#" data-mailto="beta">Pide acceso al beta</a></div>
   </div>
-
-  <footer>
-    <span>© 2026 Chaveton Studios</span>
-    <span class="links">
-      <a href="privacy.html">Política de privacidad</a>
-      <a href="#" data-mailto="beta">Escríbenos</a>
-    </span>
-  </footer>
-
+  <div class="emb"><img src="img/logo.webp" width="1200" height="786" alt="Emblema de Chaveton Studios"></div>
+</header>
+</div></div>
+<div class="w">
+<section id="estudio">
+  <p class="eyebrow">Sobre el estudio</p>
+  <h2 style="margin-top:10px">Tres ideas que guían cada juego</h2>
+  <div class="pr">
+    <div><b>I</b><h3>Ideas, no funciones</h3><p>La calidad de una idea importa más que la cantidad de características alrededor.</p></div>
+    <div><b>II</b><h3>Lo simple, bien hecho</h3><p>Entre varias soluciones válidas, elegimos siempre la más simple que resuelva bien el problema.</p></div>
+    <div><b>III</b><h3>Sin pagar para ganar</h3><p>Ningún juego del estudio vende ventajas competitivas. Se gana jugando, no pagando.</p></div>
+  </div>
+  <p class="quote">En el fondo, creemos en la grandeza de las cosas simples.</p>
+</section>
+<section id="juegos" style="padding-top:0">
+  <p class="eyebrow">Nuestro primer título</p>
+  <div class="title">
+    <div>
+      <img class="crest" src="img/crest_hex.webp" width="404" height="466" alt="Emblema de DominionHex">
+      <span class="badge">En beta</span>
+      <h2>DominionHex</h2>
+      <p class="lede" style="margin-top:14px">Estrategia por turnos sobre un tablero hexagonal. Se instala en tu celular o tablet Android; próximamente en iOS. Gratis y sin publicidad.</p>
+      <ul class="tags"><li class="hl">Sin publicidad</li><li>Contra la IA</li><li>Dos jugadores</li><li>Contra reloj</li></ul>
+      <div class="cta" style="margin-top:0"><a class="btn" href="dominionhex.html">Ver DominionHex</a></div>
+    </div>
+    <div class="phone"><img src="img/shot_partida.webp" width="1600" height="943" alt="Partida de DominionHex en un celular" loading="lazy"></div>
+  </div>
+</section>
+<section id="contacto" style="padding-top:0">
+  <p class="eyebrow">Contacto</p>
+  <h2 style="margin-top:10px">¿Quieres probar el beta o conversar con nosotros?</h2>
+  <p class="lede" style="margin-top:12px">Escríbenos y te respondemos por correo. Para el beta cerrado, cuéntanos el modelo de tu celular o tablet Android.</p>
+  <div class="cta"><a class="btn" href="#" data-mailto="beta">Escríbenos</a></div>
+</section>
+<footer class="site"><span>© 2026 Chaveton Studios</span><span><a href="privacy.html">Política de privacidad</a> · <a href="#" data-mailto="beta">Escríbenos</a></span></footer>
 </div>
+</body>
+</html>
