@@ -500,6 +500,30 @@ nav.top a.current{color:var(--gold-light);}
   color:var(--text-dim);
 }
 
+/* ---------- capturas ---------- */
+
+.shot-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  margin-top:22px;
+}
+
+.shot-grid figure{margin:0;}
+
+.shot-grid img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--border);
+}
+
+.shot-grid figcaption{
+  margin-top:8px;
+  font-size:0.82rem;
+  color:var(--text-dim);
+}
+
 /* ---------- cast (available characters) ---------- */
 
 .cast-grid{
