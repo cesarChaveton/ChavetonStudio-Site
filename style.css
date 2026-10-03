@@ -443,6 +443,13 @@ nav.top a.current{color:var(--gold-light);}
 
 .game-hero .badge{margin-bottom:18px;}
 
+.game-hero .device{
+  margin:16px auto 0;
+  max-width:42ch;
+  color:var(--gold-light);
+  font-size:0.98rem;
+}
+
 /* ---------- modes ---------- */
 
 .modes-grid{
