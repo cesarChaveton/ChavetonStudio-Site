@@ -422,3 +422,32 @@ footer.site a { color: var(--mute); }
 @media (max-width: 700px) {
   .games { grid-template-columns: 1fr; }
 }
+
+/* Selector de idioma */
+nav.site details.lang { position: relative; }
+nav.site details.lang summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px;
+  font-size: 19px; color: var(--bone); user-select: none;
+}
+nav.site details.lang summary::-webkit-details-marker { display: none; }
+nav.site details.lang summary::after {
+  content: ""; border-left: 5px solid transparent; border-right: 5px solid transparent;
+  border-top: 6px solid currentColor; margin-left: 2px;
+}
+nav.site details.lang[open] summary { border-color: var(--brass); }
+nav.site details.lang summary:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+nav.site details.lang .gl { flex: none; }
+nav.site details.lang ul {
+  list-style: none; margin: 6px 0 0; padding: 4px 0; position: absolute; right: 0; z-index: 6;
+  min-width: 100%; background: var(--ink2); border: 1px solid var(--line); border-radius: 8px;
+}
+nav.site details.lang li a { display: block; padding: 10px 16px; white-space: nowrap; }
+nav.site details.lang li a:hover { color: var(--brass); }
+nav.site details.lang li a[aria-current] { color: var(--brass); }
+@media (max-width: 700px) {
+  nav.site .links details.lang { border-top: 1px solid var(--line); }
+  nav.site .links details.lang summary { display: flex; border: 0; border-radius: 0; padding: 16px 20px; font-size: 21px; }
+  nav.site .links details.lang ul { position: static; margin: 0; border: 0; border-radius: 0; padding: 0; }
+  nav.site .links details.lang li a { border-bottom: 0; padding: 12px 20px 12px 52px; }
+}
