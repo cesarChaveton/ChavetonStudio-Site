@@ -8,6 +8,8 @@
 <link rel="icon" href="favicon.ico">
 <script src="mail.js" defer></script>
 <script src="nav.js" defer></script>
+<link rel="alternate" hreflang="es" href="https://chaveton-studios.com/privacy.html">
+<link rel="alternate" hreflang="en" href="https://chaveton-studios.com/en/privacy.html">
 </head>
 <body>
 <div class="w">
@@ -18,41 +20,87 @@
   <div class="links" id="menu">
     <a href="index.html#estudio">Estudio</a>
     <a href="juegos.html">Juegos</a>
-    <a href="mailto:contacto@chaveton-studios.com">Escríbenos</a>
+    <a href="#" data-mailto>Escríbenos</a>
+    <a href="en/privacy.html" lang="en" hreflang="en">English</a>
   </div>
 </nav>
 
 <div class="plain">
   <h1>Política de privacidad</h1>
-  <p class="note">Última actualización: 3 de octubre de 2026</p>
+  <p class="note">Última actualización: 13 de octubre de 2026</p>
 
   <div class="panel">
     <h2>Quiénes somos</h2>
-    <p>Chaveton Studios ("nosotros") desarrolla y publica el videojuego DominionHex. Esta política explica qué información recopilamos, si corresponde, cuando usas nuestra app.</p>
+    <p>Chaveton Studios SpA, RUT 78.514.258-6 ("nosotros"), desarrolla y publica el videojuego DominionHex y es la responsable del tratamiento de tus datos. Esta política explica qué información tratamos cuando usas la app, para qué la usamos y cómo puedes pedir que la borremos.</p>
   </div>
 
   <div class="panel">
-    <h2>Datos que recopilamos</h2>
-    <p>DominionHex es un juego <strong>100% local</strong>. No recopilamos ningún dato personal: no hay cuentas, no hay analítica, no hay reporte de errores remoto, no mostramos publicidad y no hay pagos reales. La app no se conecta a internet.</p>
-    <p>Lo único que se guarda queda almacenado en tu propio dispositivo, y nunca se envía a nuestros servidores ni a terceros:</p>
+    <h2>Qué información tratamos</h2>
+    <p>DominionHex se conecta a internet para guardar tu progreso en un servidor y no tener que perderlo si cambias de teléfono o reinstalas el juego. Al abrir la app por primera vez se crea una <strong>cuenta anónima</strong>: no te pedimos nombre, correo ni contraseña. Guardamos:</p>
     <ul>
-      <li>Nombre de perfil que eliges dentro del juego.</li>
-      <li>Identidad que equipas: el avatar y la ficha.</li>
-      <li>Desbloqueos cosméticos.</li>
-      <li>Saldo de la economía de gemas simulada, si la app lo guarda. No es dinero real y no sale del dispositivo.</li>
-      <li>Ajustes de la app (volumen, escala de interfaz, minimapa).</li>
-      <li>Progreso de escenarios y del tutorial.</li>
+      <li><strong>Un identificador de cuenta anónima</strong>, generado por el servicio de autenticación. No contiene tu nombre ni tu correo.</li>
+      <li><strong>Tu perfil dentro del juego:</strong> el nombre que eliges, el avatar y la ficha que equipas.</li>
+      <li><strong>Tu progreso:</strong> desbloqueos cosméticos, escenarios superados, avance del tutorial, misiones y premios del mapa.</li>
+      <li><strong>Tus ajustes:</strong> escala de la interfaz, minimapa, recentrado automático y silencios de música y efectos.</li>
+      <li><strong>Tu saldo de gemas</strong> y los identificadores de los movimientos que lo modificaron (para no acreditar dos veces lo mismo).</li>
+      <li><strong>Tu correo electrónico, solo si decides guardar tu progreso con correo y contraseña</strong> (es opcional). La contraseña la gestiona el servicio de autenticación; nosotros no la vemos.</li>
+    </ul>
+    <p>Como en cualquier conexión a internet, el proveedor del servicio recibe la dirección IP de tu dispositivo para poder responderle.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Qué no recopilamos</h2>
+    <ul>
+      <li>No mostramos publicidad ni usamos herramientas de analítica o de seguimiento.</li>
+      <li>No accedemos a tu ubicación, contactos, fotos, micrófono ni cámara.</li>
+      <li>No guardamos en el servidor la partida en curso.</li>
+      <li>No vendemos ni cedemos tus datos a terceros con fines comerciales.</li>
     </ul>
   </div>
 
   <div class="panel">
-    <h2>Uso de la información</h2>
-    <p>Como no recopilamos datos, no hay nada que compartir con terceros. La información guardada localmente la usa únicamente la app, en tu propio dispositivo, para recordar tu progreso y tus preferencias.</p>
+    <h2>Para qué los usamos</h2>
+    <p>Usamos esta información solo para que el juego funcione: recordar tu perfil, tu progreso, tus ajustes y tu saldo, y recuperarlos si cambias de dispositivo con tu cuenta guardada. No la usamos para publicidad ni para perfilarte.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Dónde se guardan y quién los procesa</h2>
+    <p>Los datos se almacenan con Firebase, un servicio de Google (Firebase Authentication y Cloud Firestore). Tu perfil, progreso y saldo se guardan en Cloud Firestore, en servidores ubicados en São Paulo, Brasil; Firebase Authentication, que gestiona el identificador de tu cuenta, funciona desde centros de datos en Estados Unidos, y Google puede procesar el resto de los datos en otros países donde opera. Google actúa como proveedor que procesa los datos por encargo nuestro.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Jugar sin conexión</h2>
+    <p>Puedes seguir jugando sin conexión. El juego guarda los cambios en tu dispositivo y los envía al servidor cuando vuelve la conexión.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Cuánto tiempo los conservamos</h2>
+    <p>Conservamos tus datos mientras tu cuenta exista y hasta que pidas su borrado. Si desinstalas el juego sin haber guardado tu progreso con correo y contraseña, no podrás recuperar esa cuenta anónima.</p>
+    <p>Cuando borras tu cuenta, eliminamos tus datos de nuestro servicio; el proveedor completa la eliminación definitiva en sus sistemas en un máximo de 180 días.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Tus derechos y cómo borrar tus datos</h2>
+    <!-- Cuando exista la página web de eliminación de cuenta (F4 pedido 3), enlazarla aquí. -->
+    <p>Tienes derecho a acceder a tus datos, rectificarlos, pedir que los borremos, oponerte a su tratamiento, llevártelos (portabilidad) y pedir su bloqueo temporal.</p>
+    <p>Desde Ajustes, dentro de la app, puedes ver y corregir tu perfil y borrar tu cuenta con todos sus datos (perfil, progreso y saldo). Como una cuenta anónima no contiene datos que nos permitan saber quién eres, esa es la forma segura de ejercer tus derechos sobre ella. Si guardaste tu progreso con correo y contraseña, también puedes escribirnos desde ese correo a <a href="#" data-mailto data-mailto-text>contacto</a>.</p>
+    <p>Confirmamos la recepción de tu solicitud y la respondemos dentro de 30 días corridos; si el caso lo requiere, podemos prorrogar ese plazo una sola vez por otros 30 días corridos, y te avisaremos.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Compras dentro del juego</h2>
+    <p>Si compras gemas o contenido cosmético, el pago lo procesa Google Play. Nosotros no recibimos ni guardamos los datos de tu tarjeta; solo registramos tu saldo de gemas y el identificador del movimiento.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Cambios en esta política</h2>
+    <p>Si cambiamos la forma en que tratamos tus datos, actualizaremos esta página y la fecha de arriba.</p>
   </div>
 
   <div class="panel">
     <h2>Contacto</h2>
-    <p>Para consultas sobre esta política, el contacto del titular es <a href="mailto:contacto@chaveton-studios.com">contacto@chaveton-studios.com</a>.</p>
+    <p>Para consultas sobre esta política, el contacto del titular es <a href="#" data-mailto data-mailto-text>contacto</a>.</p>
+    <p>Si nos escribes, usamos tu correo solo para responderte y gestionar tu solicitud.</p>
   </div>
 </div>
 

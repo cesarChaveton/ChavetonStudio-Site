@@ -8,8 +8,18 @@
   var user = "contacto";
   var domain = "chaveton-studios.com";
   var address = user + "@" + domain;
-  var betaSubject = "Solicitud para las pruebas del beta de DominionHex";
-  var betaBody = [
+  var isEn = (document.documentElement.lang || "").toLowerCase().indexOf("en") === 0;
+  var betaSubject = isEn ? "Request to join the DominionHex beta" : "Solicitud para las pruebas del beta de DominionHex";
+  var betaBody = (isEn ? [
+    "Hi,",
+    "",
+    "I would like to join the DominionHex closed beta (closed testing).",
+    "",
+    "Google Play account email:",
+    "Android phone or tablet model:",
+    "",
+    "Thanks."
+  ] : [
     "Hola,",
     "",
     "Quiero participar en las pruebas del beta (closed testing) de DominionHex.",
@@ -18,7 +28,7 @@
     "Modelo de teléfono o tablet Android:",
     "",
     "Gracias."
-  ].join("\n");
+  ]).join("\n");
 
   document.querySelectorAll("[data-mailto]").forEach(function (el) {
     var href = "mailto:" + address;
