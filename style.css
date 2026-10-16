@@ -317,6 +317,7 @@ summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .hx.soon span { color: var(--mute); }
 .hx.soon span::after { content: "Próximamente"; display: block; font-size: 13px; letter-spacing: .06em; color: var(--brass); }
 .hx span { display: block; margin-top: 4px; color: var(--bone); }
+.cast-more { margin: 16px 0 0; text-align: center; color: var(--brass); font-size: 17px; }
 .leg { display: flex; gap: 20px; flex-wrap: wrap; font-size: 16px; margin-top: 20px; color: var(--mute); }
 .leg i { display: inline-block; width: 14px; height: 16px; margin-right: 8px; vertical-align: -3px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
 .sub { margin-top: 36px; font-size: 24px; font-weight: 600; }
