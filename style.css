@@ -468,3 +468,25 @@ nav.site details.lang li a[aria-current] { color: var(--brass); }
     radial-gradient(circle, rgba(201,162,75,.16) 1px, transparent 1.4px);
   background-size: auto, 30px 30px;
 }
+
+/* Portada del estudio: panel con la mesa de taller al fondo y el texto sobre la zona oscura. */
+.home .hero.studio-hero {
+  grid-template-columns: 1fr;
+  min-height: 460px;
+  padding: 64px clamp(24px, 5vw, 56px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(18,21,27,.96) 0%, rgba(18,21,27,.82) 38%, rgba(18,21,27,.15) 78%),
+    url("img/studio_taller.webp") right center / cover no-repeat;
+}
+.home .hero.studio-hero > div { max-width: 560px; }
+@media (max-width: 760px) {
+  .home .hero.studio-hero {
+    min-height: 0;
+    padding: 40px 22px;
+    background:
+      linear-gradient(180deg, rgba(18,21,27,.93) 0%, rgba(18,21,27,.8) 100%),
+      url("img/studio_taller.webp") 70% center / cover no-repeat;
+  }
+}
