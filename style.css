@@ -460,3 +460,11 @@ nav.site details.lang li a[aria-current] { color: var(--brass); }
   nav.site .links details.lang ul { position: static; margin: 0; border: 0; border-radius: 0; padding: 0; }
   nav.site .links details.lang li a { border-bottom: 0; padding: 12px 20px 12px 52px; }
 }
+
+/* Fondo del estudio: neutro, sin hexágonos (esos son de DominionHex). Puntos finos y un velo cálido arriba. */
+.studio-bg {
+  background-image:
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(201,162,75,.10), transparent 70%),
+    radial-gradient(circle, rgba(201,162,75,.16) 1px, transparent 1.4px);
+  background-size: auto, 30px 30px;
+}

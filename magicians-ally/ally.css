@@ -1,25 +1,18 @@
 /* Magician's Ally: carta boca abajo con borde brillante, solo CSS (sin imagen). */
 .ally-hero .badge { margin-top: 18px; }
 .ally-card {
-  width: min(210px, 52vw);
-  aspect-ratio: 5 / 7;
-  margin: 0 auto;
-  border-radius: 14px;
-  background:
-    repeating-linear-gradient(45deg, rgba(201,162,75,.10) 0 6px, transparent 6px 12px),
-    #0b0d12;
-  border: 2px solid var(--brass);
-  box-shadow: 0 0 22px rgba(201,162,75,.28), inset 0 0 0 8px #0b0d12, inset 0 0 0 9px rgba(201,162,75,.35);
+  display: block; width: min(250px, 56vw); height: auto; margin: 0 auto;
+  filter: drop-shadow(0 0 22px rgba(201,162,75,.35));
   animation: ally-glow 4.5s ease-in-out infinite;
 }
-@keyframes ally-glow { 50% { box-shadow: 0 0 34px rgba(201,162,75,.5), inset 0 0 0 8px #0b0d12, inset 0 0 0 9px rgba(201,162,75,.5); } }
+@keyframes ally-glow { 50% { filter: drop-shadow(0 0 34px rgba(201,162,75,.6)); } }
 @media (prefers-reduced-motion: reduce) { .ally-card { animation: none; } }
+.ally-banner { margin: 8px 0 0; }
+.ally-banner img { display: block; width: 100%; max-height: 360px; object-fit: cover; object-position: 70% 50%; border-radius: 6px; -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent); mask-image: linear-gradient(to bottom, #000 60%, transparent); }
+.ally-split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: center; }
+.ally-split img { width: 100%; height: auto; }
+@media (max-width: 760px) { .ally-split { grid-template-columns: 1fr; } }
 .ally-story { max-width: 640px; }
 .ally-story p:not(.eyebrow) { font-size: 1.15em; line-height: 1.6; margin: 0 0 14px; }
 /* Mini carta para la tarjeta de la portada del estudio */
-.ally-mini {
-  width: 58px; aspect-ratio: 5 / 7; margin: 12px 0; border-radius: 7px;
-  background: repeating-linear-gradient(45deg, rgba(201,162,75,.12) 0 4px, transparent 4px 8px), #0b0d12;
-  border: 1.5px solid var(--brass);
-  box-shadow: 0 0 14px rgba(201,162,75,.3), inset 0 0 0 4px #0b0d12, inset 0 0 0 5px rgba(201,162,75,.35);
-}
+.ally-mini { display: block; width: 58px; height: auto; margin: 12px 0; filter: drop-shadow(0 0 10px rgba(201,162,75,.35)); }
