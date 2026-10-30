@@ -16,3 +16,10 @@
 @media (prefers-reduced-motion: reduce) { .ally-card { animation: none; } }
 .ally-story { max-width: 640px; }
 .ally-story p:not(.eyebrow) { font-size: 1.15em; line-height: 1.6; margin: 0 0 14px; }
+/* Mini carta para la tarjeta de la portada del estudio */
+.ally-mini {
+  width: 58px; aspect-ratio: 5 / 7; margin: 12px 0; border-radius: 7px;
+  background: repeating-linear-gradient(45deg, rgba(201,162,75,.12) 0 4px, transparent 4px 8px), #0b0d12;
+  border: 1.5px solid var(--brass);
+  box-shadow: 0 0 14px rgba(201,162,75,.3), inset 0 0 0 4px #0b0d12, inset 0 0 0 5px rgba(201,162,75,.35);
+}

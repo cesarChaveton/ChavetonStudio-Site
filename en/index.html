@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chaveton Studios</title>
+<title>Chaveton Studios — Games and apps</title>
+<meta name="description" content="Chaveton Studios is an independent studio from Santiago, Chile, making games and apps. Meet DominionHex and Magician's Ally.">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="/magicians-ally/ally.css">
 <script src="../mail.js" defer></script>
 <script src="../nav.js" defer></script>
 <link rel="alternate" hreflang="es" href="https://chaveton-studios.com/index.html">
@@ -18,7 +20,7 @@
   <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
   <div class="links" id="menu">
     <a href="index.html#estudio">Studio</a>
-    <a href="index.html#juegos">Games</a>
+    <a href="index.html#desarrollos">What we build</a>
     <a href="#" data-mailto>Contact us</a>
     <details class="lang">
       <summary aria-label="Language"><svg class="gl" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.9 4.2 6 4.2 9.5s-1.4 6.600-4.200 9.500c-2.800-2.900-4.200-6-4.200-9.500S9.200 5.400 12 2.500z"/></svg><span>Language</span></summary>
@@ -31,10 +33,10 @@
 </nav>
 <header class="hero">
   <div>
-    <p class="eyebrow">Independent video game studio</p>
-    <h1>Easy to learn. Hard to master.</h1>
-    <p class="lede">We design unforgettable games that put your wits to the test, born from the experience of a lifelong player just like you. No pay-to-win.</p>
-    <div class="cta"><a class="btn" href="index.html#juegos">Meet DominionHex</a></div>
+    <p class="eyebrow">Independent games and apps studio</p>
+    <h1>Games and tools to play, surprise and share.</h1>
+    <p class="lede">We design every product with care: original art, clear pricing and respect for your time and your data.</p>
+    <div class="cta"><a class="btn" href="index.html#desarrollos">See what we build</a></div>
   </div>
   <div class="emb"><img src="../img/logo.webp" width="1200" height="786" alt="Chaveton Studios emblem"></div>
 </header>
@@ -42,35 +44,41 @@
 <div class="w">
 <section id="estudio">
   <p class="eyebrow">About the studio</p>
-  <h2 style="margin-top:10px">Three ideas behind every game</h2>
+  <h2 style="margin-top:10px">Three ideas behind every product</h2>
   <div class="pr">
     <div><b>I</b><h3>Ideas, not features</h3><p>The quality of an idea matters more than the number of features around it.</p></div>
     <div><b>II</b><h3>Simple, done well</h3><p>Among several valid solutions, we always pick the simplest one that solves the problem well.</p></div>
-    <div><b>III</b><h3>No pay-to-win</h3><p>No game from the studio sells competitive advantages. You win by playing, not by paying.</p></div>
-  </div>
+    <div><b>III</b><h3>Clear pricing</h3><p>If something costs money, it is out in the open. Nothing we sell gives you an advantage to win.</p></div>
+    </div>
   <p class="quote">At heart, we believe in the greatness of simple things.</p>
 </section>
-<section id="juegos" style="padding-top:0">
-  <p class="eyebrow">Our first title</p>
-  <div class="title">
-    <div>
-      <img class="crest" src="../img/crest_hex.webp" width="404" height="466" alt="DominionHex emblem">
+<section id="desarrollos" style="padding-top:0">
+  <p class="eyebrow">What we build</p>
+  <h2 style="margin-top:10px">What we are working on</h2>
+  <div class="games">
+    <a class="game-card" href="dominionhex.html">
       <span class="badge">Coming soon</span>
-      <h2>DominionHex</h2>
-      <p class="lede" style="margin-top:14px">Turn-based strategy on a hexagonal board. Install it on your Android phone or tablet; iOS coming soon. Free and ad-free.</p>
-      <ul class="tags"><li class="hl">Ad-free</li><li>Vs. AI</li><li>Two Players</li><li>Time Attack</li></ul>
-      <div class="cta" style="margin-top:0"><a class="btn" href="dominionhex.html">See DominionHex</a></div>
-    </div>
-    <div class="phone"><img src="../img/shot_partida.webp" width="1600" height="943" alt="A DominionHex match on a phone" loading="lazy"></div>
+      <img class="crest" src="../img/crest_hex.webp" width="404" height="466" alt="DominionHex emblem">
+      <h3>DominionHex</h3>
+      <p>Turn-based strategy on a hexagonal board, for Android phones and tablets. Free and ad-free.</p>
+      <span class="go">See DominionHex →</span>
+    </a>
+    <a class="game-card" href="/en/magicians-ally/">
+      <span class="badge">In development</span>
+      <div class="ally-mini" aria-hidden="true"></div>
+      <h3>Magician's Ally</h3>
+      <p>Your secret magic assistant: digital tools for live card magic.</p>
+      <span class="go">See Magician's Ally →</span>
+    </a>
   </div>
 </section>
 <section id="contacto" style="padding-top:0">
   <p class="eyebrow">Contact</p>
   <h2 style="margin-top:10px">Want to chat with us?</h2>
   <p class="lede" style="margin-top:12px">Write to us and we will reply by email.</p>
-  <div class="cta"><a class="btn" href="#" data-mailto>Contact us</a></div>
+  <div class="cta"><a class="btn" href="mailto:contacto@chaveton-studios.com">Contact us</a></div>
 </section>
-<footer class="site"><span>© 2026 Chaveton Studios</span><span><a href="privacy.html">Privacy policy</a> · <a href="#" data-mailto>Contact us</a></span></footer>
+<footer class="site"><span>© 2026 Chaveton Studios</span><span>Privacy: <a href="privacy.html">DominionHex</a> · <a href="/en/magicians-ally/privacy/">Magician's Ally</a> · <a href="mailto:contacto@chaveton-studios.com">Contact us</a></span></footer>
 </div>
 </body>
 </html>
