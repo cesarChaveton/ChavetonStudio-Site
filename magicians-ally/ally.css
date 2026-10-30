@@ -1,0 +1,18 @@
+/* Magician's Ally: carta boca abajo con borde brillante, solo CSS (sin imagen). */
+.ally-hero .badge { margin-top: 18px; }
+.ally-card {
+  width: min(210px, 52vw);
+  aspect-ratio: 5 / 7;
+  margin: 0 auto;
+  border-radius: 14px;
+  background:
+    repeating-linear-gradient(45deg, rgba(201,162,75,.10) 0 6px, transparent 6px 12px),
+    #0b0d12;
+  border: 2px solid var(--brass);
+  box-shadow: 0 0 22px rgba(201,162,75,.28), inset 0 0 0 8px #0b0d12, inset 0 0 0 9px rgba(201,162,75,.35);
+  animation: ally-glow 4.5s ease-in-out infinite;
+}
+@keyframes ally-glow { 50% { box-shadow: 0 0 34px rgba(201,162,75,.5), inset 0 0 0 8px #0b0d12, inset 0 0 0 9px rgba(201,162,75,.5); } }
+@media (prefers-reduced-motion: reduce) { .ally-card { animation: none; } }
+.ally-story { max-width: 640px; }
+.ally-story p:not(.eyebrow) { font-size: 1.15em; line-height: 1.6; margin: 0 0 14px; }
