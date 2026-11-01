@@ -490,3 +490,6 @@ nav.site details.lang li a[aria-current] { color: var(--brass); }
       url("img/studio_taller.webp") 70% center / cover no-repeat;
   }
 }
+
+/* Boton de Google Play (ver play.js). Desactivado hasta que el juego este publicado. */
+.btn.is-soon { opacity: .55; pointer-events: none; cursor: default; }
