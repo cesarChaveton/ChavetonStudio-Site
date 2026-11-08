@@ -22,10 +22,9 @@
     <a href="games.html">What we build</a>
     <a href="#" data-mailto>Contact us</a>
     <details class="lang">
-      <summary aria-label="Language"><svg class="gl" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.9 4.2 6 4.2 9.5s-1.4 6.600-4.200 9.500c-2.800-2.900-4.200-6-4.200-9.500S9.200 5.400 12 2.500z"/></svg><span>Language</span></summary>
+      <summary aria-label="Language"><svg class="gl" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.9 4.2 6 4.2 9.5s-1.4 6.600-4.200 9.500c-2.800-2.900-4.200-6-4.200-9.500S9.200 5.400 12 2.500z"/></svg><span>EN</span></summary>
       <ul>
         <li><a href="../privacy.html" lang="es" hreflang="es">Español</a></li>
-        <li><a href="privacy.html" lang="en" hreflang="en" aria-current="true">English</a></li>
       </ul>
     </details>
   </div>
@@ -50,7 +49,8 @@
       <li><strong>Your settings:</strong> interface scale, minimap, automatic re-centering, and music and effects mute.</li>
       <li><strong>Your gem balance</strong> and the identifiers of the transactions that changed it (so the same thing is never credited twice).</li>
     </ul>
-    <p>Linking a Google account is optional, only from age 14, and only from Settings. If you link it, the game stores the email and the name on the device to show the account. Firebase Authentication stores the link to that user's Google account, so the save can be recognized on another phone. That link includes the Google account identifier and, according to what Google returns, the email, the name and the photo. The photo and the Google account identifier are not written into the save, nor into the Firestore collections players and wallet.</p>
+    <p>Linking a Google account is optional, only from age 14, and only from Settings. If you link it, the game stores the email and the name on the device to show the account, and Firebase Authentication — which runs from data centers in the United States — also stores that email and name together with the link to that user's Google account, so the save can be recognized on another phone. That link includes the Google account identifier and, according to what Google returns, the email, the name and the photo. The photo and the Google account identifier are not written into the save, nor into the Firestore collections players and wallet.</p>
+    <p>Your age declaration (if you are 14 or older) is kept only on your phone: it is never sent to our servers or to Firebase.</p>
     <p>As with any internet connection, the service provider receives your device's IP address in order to respond to it.</p>
   </div>
 
@@ -82,15 +82,16 @@
   <div class="panel">
     <h2>How long we keep it</h2>
     <p>We keep your data while your account exists and until you ask us to delete it. The Google link is kept until you delete the account in the game. If you uninstall the app or clear its data and you had not linked Google, we cannot recover your anonymous account or your progress. If you had linked it, you can recover the save from Settings on another phone.</p>
+    <p>An anonymous account (without Google linked) that is inactive for 12 months is deleted automatically, because we have no way to identify it or to contact its owner outside the game.</p>
     <p>When you delete your account, we remove your data from our service; the provider completes the final deletion in its systems within a maximum of 180 days.</p>
   </div>
 
   <div class="panel">
     <h2>Your rights and how to delete your data</h2>
-    <!-- When the web page for account deletion exists (F4 request 3), link it here. -->
     <p>You have the right to access your data, correct it, ask us to delete it, object to its processing, take it with you (portability) and ask for it to be temporarily blocked.</p>
     <p>From Settings inside the app you can view and correct your profile and delete your account with all of its data (profile, progress and balance). Deleting the account in the game deletes the save and, if you had linked Google, the link as well. It does not delete the Google account itself.</p>
     <p>If you did not link Google, the anonymous account contains nothing that tells us who you are, and deleting it in the app is the secure way to exercise your rights over it.</p>
+    <p>If you do not have the game installed and you had linked a Google account, you can request deletion by writing to <a href="#" data-mailto="privacidad" data-mailto-text>privacidad</a> from that account's email address. More detail on the <a href="delete-account.html">account deletion page</a>.</p>
     <p>We acknowledge your request and respond within 30 calendar days; if the case requires it, we may extend that period once by another 30 calendar days, and we will let you know.</p>
   </div>
 

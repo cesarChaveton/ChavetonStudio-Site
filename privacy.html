@@ -22,9 +22,8 @@
     <a href="juegos.html">Desarrollos</a>
     <a href="#" data-mailto>Escríbenos</a>
     <details class="lang">
-      <summary aria-label="Idioma"><svg class="gl" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.9 4.2 6 4.2 9.5s-1.4 6.600-4.200 9.500c-2.800-2.900-4.200-6-4.200-9.500S9.200 5.400 12 2.500z"/></svg><span>Idioma</span></summary>
+      <summary aria-label="Idioma"><svg class="gl" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.9 4.2 6 4.2 9.5s-1.4 6.600-4.200 9.500c-2.800-2.900-4.200-6-4.200-9.500S9.200 5.400 12 2.500z"/></svg><span>ES</span></summary>
       <ul>
-        <li><a href="privacy.html" lang="es" hreflang="es" aria-current="true">Español</a></li>
         <li><a href="en/privacy.html" lang="en" hreflang="en">English</a></li>
       </ul>
     </details>
@@ -50,7 +49,8 @@
       <li><strong>Tus ajustes:</strong> escala de la interfaz, minimapa, recentrado automático y silencios de música y efectos.</li>
       <li><strong>Tu saldo de gemas</strong> y los identificadores de los movimientos que lo modificaron (para no acreditar dos veces lo mismo).</li>
     </ul>
-    <p>Vincular una cuenta de Google es opcional, solo desde los 14 años y solo desde Ajustes. Si la vinculas, el juego guarda el correo y el nombre en el dispositivo para mostrar la cuenta. Firebase Authentication guarda el vínculo con la cuenta de Google de ese usuario, para reconocer la partida en otro teléfono. Ese vínculo incluye el identificador de la cuenta de Google y, según lo que Google devuelve, el correo, el nombre y la foto. La foto y el identificador de la cuenta de Google no se escriben en la partida ni en las colecciones players y wallet de Firestore.</p>
+    <p>Vincular una cuenta de Google es opcional, solo desde los 14 años y solo desde Ajustes. Si la vinculas, el juego guarda el correo y el nombre en el dispositivo para mostrar la cuenta, y Firebase Authentication —que funciona desde centros de datos en Estados Unidos— guarda también ese correo y ese nombre junto con el vínculo a la cuenta de Google de ese usuario, para reconocer la partida en otro teléfono. Ese vínculo incluye el identificador de la cuenta de Google y, según lo que Google devuelve, el correo, el nombre y la foto. La foto y el identificador de la cuenta de Google no se escriben en la partida ni en las colecciones players y wallet de Firestore.</p>
+    <p>Tu declaración de edad (si tienes 14 años o más) queda guardada solo en tu teléfono: nunca se envía a nuestros servidores ni a Firebase.</p>
     <p>Como en cualquier conexión a internet, el proveedor del servicio recibe la dirección IP de tu dispositivo para poder responderle.</p>
   </div>
 
@@ -82,15 +82,16 @@
   <div class="panel">
     <h2>Cuánto tiempo los conservamos</h2>
     <p>Conservamos tus datos mientras tu cuenta exista y hasta que pidas su borrado. El vínculo con Google se conserva hasta que borras la cuenta en el juego. Si desinstalas la app o borras sus datos y no habías vinculado Google, no podemos recuperar tu cuenta anónima ni tu progreso. Si la habías vinculado, puedes recuperar la partida desde Ajustes en otro teléfono.</p>
+    <p>Una cuenta anónima (sin Google vinculado) que esté sin actividad durante 12 meses se elimina automáticamente, porque no tenemos forma de identificarla ni de contactar a su dueño fuera del juego.</p>
     <p>Cuando borras tu cuenta, eliminamos tus datos de nuestro servicio; el proveedor completa la eliminación definitiva en sus sistemas en un máximo de 180 días.</p>
   </div>
 
   <div class="panel">
     <h2>Tus derechos y cómo borrar tus datos</h2>
-    <!-- Cuando exista la página web de eliminación de cuenta (F4 pedido 3), enlazarla aquí. -->
     <p>Tienes derecho a acceder a tus datos, rectificarlos, pedir que los borremos, oponerte a su tratamiento, llevártelos (portabilidad) y pedir su bloqueo temporal.</p>
     <p>Desde Ajustes, dentro de la app, puedes ver y corregir tu perfil y borrar tu cuenta con todos sus datos (perfil, progreso y saldo). Borrar la cuenta en el juego elimina la partida y, si habías vinculado Google, también el vínculo. No elimina la cuenta de Google.</p>
     <p>Si no vinculaste Google, la cuenta anónima no contiene datos que nos permitan saber quién eres, y borrarla en la app es la forma segura de ejercer tus derechos sobre ella.</p>
+    <p>Si no tienes el juego instalado y vinculaste una cuenta de Google, puedes pedir el borrado escribiendo a <a href="#" data-mailto="privacidad" data-mailto-text>privacidad</a> desde el correo de esa cuenta. Más detalle en la <a href="borrar-cuenta.html">página de borrado de cuenta</a>.</p>
     <p>Confirmamos la recepción de tu solicitud y la respondemos dentro de 30 días corridos; si el caso lo requiere, podemos prorrogar ese plazo una sola vez por otros 30 días corridos, y te avisaremos.</p>
   </div>
 
